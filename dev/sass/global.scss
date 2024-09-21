@@ -1,0 +1,143 @@
+// -------------------------global-------------------------
+.container {
+    max-width: 1380px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+
+
+// -------------------------markup-------------------------
+.markup {
+    background: $color_gradient;
+    padding: 20px 0;
+
+    & .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+        gap: 20px;
+    }
+
+		// .markup__element
+
+		&__element {
+            border: 1px solid $color_black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: $color_disable-secondary;
+		}
+
+		// .markup__title
+        
+		&__title {
+            font-size: 34px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 40px;
+            border-bottom: 1px dashed black;
+        }
+    }
+    .color {
+
+        
+        // .color__item
+        
+		&__item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+		}
+
+		// .color__view
+
+		&__view {
+            flex: 0 0 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 1px solid $color_black;
+		}
+
+        // .color__number
+
+        &__name {
+            font-size: 19px;
+            line-height: 26px;
+        }
+
+		// .color__view-1
+
+		&__view-1 {
+            background-color: $color_green-main;
+		}
+
+
+		// .color__view-2
+
+		&__view-2 {
+            background-color: $color_green-secondary;
+		}
+
+		// .color__view-3
+
+		&__view-3 {
+            background-color: $color_green-additional;
+		}
+
+
+		// .color__view-4
+
+		&__view-4 {
+            background-color: $color_white;
+		}
+
+		// .color__view-5
+
+		&__view-5 {
+            background-color: $color_black;
+		}
+
+		// .color__view-6
+
+		&__view-6 {
+            background-color: $color_beige;
+		}
+
+		// .color__view-7
+
+		&__view-7 {
+            background-color: $color_khaki;
+		}
+
+		// .color__view-8
+
+		&__view-8 {
+            background-color: $color_error;
+		}
+
+		// .color__view-9
+
+		&__view-9 {
+            background-color: $color_disable;
+		}
+
+		// .color__view-10
+
+		&__view-10 {
+            background-color: $color_disable-secondary;
+		}
+		// .color__view-11
+
+		&__view-11 {
+            background: $color_gradient;
+		}
+		// .color__view-12
+
+		&__view-12 {
+            background: $color_gradient-secondary;
+		}
+}
