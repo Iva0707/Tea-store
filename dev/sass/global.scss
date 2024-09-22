@@ -135,7 +135,7 @@
             flex: 0 0 70px;
             height: 70px;
             border-radius: 50%;
-            border: 1px solid $color_black;
+            box-shadow: 4px 4px 10px 0 #00000040;
 	}
       // .color__name
       &__name {
