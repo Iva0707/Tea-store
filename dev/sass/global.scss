@@ -29,7 +29,7 @@
       border-radius: 8px;
       background-color: $color_green-main;
       text-align: center;
-      box-shadow: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26;
+      box-shadow: $shadow_button;
       transition: .3s;
       &.btn_category {
             font-weight: 500;
@@ -42,11 +42,11 @@
             box-shadow: none;
       }
       &:hover {
-            box-shadow: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26, 4px 4px 10px 0 #3b3b3b40;
+            box-shadow: $shadow_button-hover;
       }
       &:focus,
       &:active {
-            box-shadow: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26;
+            box-shadow: $shadow_button;
             background-color: $color_green-secondary;
       }
 }
@@ -78,14 +78,14 @@
       &:hover,
       &:focus {
             border: 2px solid $color_green-additional;
-            box-shadow: 4px 4px 10px 0 #00000040;
+            box-shadow: $shadow_input-hover
       }
       &:active {
             box-shadow: none;
       }
 }
 
-// -------------------------markup-------------------------
+// -------------------------markup settings (for remove)-------------------------
 .markup {
       background: $color_gradient;
       padding: 20px 0;
@@ -111,11 +111,9 @@
             margin-bottom: 20px;
             font-weight: 600;
             line-height: 40px;
-            border-bottom: 1px dashed black;
+            border-bottom: 1px dashed $color_black;
       }
 }
-
-// ------------colors------------
     .color {
       // .color__element
       &__element {
