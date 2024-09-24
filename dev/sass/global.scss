@@ -170,23 +170,35 @@
 	}
 	// .color__view-8
 	&__view-8 {
-            background-color: $color_error;
+            background-color: $color_orange;
 	}
 	// .color__view-9
 	&__view-9 {
-            background-color: $color_disable;
+            background-color: $color_grey;
 	}
 	// .color__view-10
 	&__view-10 {
-            background-color: $color_disable-secondary;
+            background-color: $color_error;
 	}
 	// .color__view-11
 	&__view-11 {
-            background: $color_gradient;
+            background-color: $color_disable;
 	}
 	// .color__view-12
 	&__view-12 {
+            background-color: $color_disable-secondary;
+	}
+	// .color__view-13
+	&__view-13 {
+            background: $color_gradient;
+	}
+	// .color__view-14
+	&__view-14 {
             background: $color_gradient-secondary;
+	}
+	// .color__view-15
+	&__view-15 {
+            background: $color_gradient-additional;
 	}
 }
 
