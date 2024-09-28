@@ -60,46 +60,51 @@
         justify-content: center;
         position: relative;
         cursor: pointer;
-        background-color: darkkhaki;
-        &::before {
-            position: absolute;
-            content: '';
-            width: 18px;
-            height: 1.5px;
-            border-radius: 20px;
-            background-color: $color_black;
-            top: 0;
-            left: 0;
-            background-color: forestgreen;
-        }
+        &::before,
         &::after {
             position: absolute;
             content: '';
-            width: 18px;
+            width: 100%;
             height: 1.5px;
             border-radius: 20px;
             background-color: $color_black;
-            bottom: 0;
             left: 0;
-            background-color: darkgrey;
+            transition: all .2s;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
         }
         &.header__burger-open {
             &::before {
+                top: calc(50% - 0.75px);
+                transform: rotate(45deg);
+                transition: all .2s;
             }
             &::after {
+                bottom: calc(50% - 0.75px);
+                transform: rotate(-45deg);
+                transition: all .2s;
             }
         }
     }
     
     // .header__burger-item
     &__burger-item {
-        width: 18px;
+        width: 100%;
         height: 1.5px;
         border-radius: 20px;
         background-color: $color_black;
-        // .header__burger-open & {
-        //     display: none;
-        // }
+        transition: all .2s;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        .header__burger-open & {
+            width: 0;
+        }
     }
 
     // .header__column
