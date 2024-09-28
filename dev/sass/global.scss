@@ -12,6 +12,10 @@ a {
       }
 }
 
+input[type=search] {
+      box-sizing: border-box;
+}
+
 [class*="__container"] {
       max-width: 1380px;
       padding: 0 50px;

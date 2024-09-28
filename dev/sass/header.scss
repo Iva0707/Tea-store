@@ -1,0 +1,134 @@
+.header {
+    padding: 17.5px 0;
+
+
+    // .header__container
+
+    &__container {
+    }
+
+    // .header__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    
+    // .header__logo
+    
+    &__logo {
+    }
+    
+    // .header__nav
+    
+    &__nav {
+    }
+    
+    // .header__menu
+    
+    &__menu {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px 2.9em;
+    }
+    
+    // .header__link
+    
+    &__link {
+        color: $color_black;
+        transition: .3s;
+        font-size: 1rem;
+        line-height: 1.56;
+        &:hover,
+        &:active,
+        &:focus {
+            color: $color_green-accent;
+        }
+    }
+
+    // .header__burger
+
+    &__burger {
+
+    }
+
+    // .header__column
+
+    &__column {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 31%;
+        justify-content: space-between;
+    }
+
+    // .header__form
+    
+    &__form {
+        position: relative;
+        // min-width: 248px;
+        margin-right: 16px;
+        flex: 0 1 248px;
+        min-width: 123px;
+    }
+    
+    // .header__input
+    &__input {
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 40px 10px 16.5px;
+        background-color: $color_green-main;
+        letter-spacing: 0.01em;
+        color: $color_black;
+        line-height: 1.55;
+        transition: .3s;
+        &::placeholder {
+            color: $color_black;
+      }
+    }
+
+    // .header__form-icon
+
+    &__form-icon {
+        height: 16px;
+        width: 17px;
+        position: absolute;
+        top: 50%;
+        right: 16.5px;
+        transform: translateY(-50%);
+        cursor: text;
+    }
+
+    // .header__profile
+    
+    &__profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    // .header__profile-item
+    &__profile-item {
+        width: 27px;
+        height: 24px;
+        
+    }
+    
+    // .header__cart
+    
+    &__cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    // .header__cart-item
+    &__cart-item {
+        width: 27px;
+        height: 26px;
+    }
+}
