@@ -1,4 +1,18 @@
 @media screen and (max-width: 991.98px) {
+    // ____________header____________
+    .header {
+        &__logo {
+            display: none;
+        }
+        &__menu {
+            display: none;
+        }
+
+        &__column {
+            flex: 0 1 auto;
+            gap: 18px;
+        }
+    }
 }
 
 
