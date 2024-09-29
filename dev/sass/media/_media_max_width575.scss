@@ -8,6 +8,11 @@
 
     .header {
         padding: 14px 0;
+        &__menu {
+            &.header__burger-open {
+                top: 54px;
+            }
+        }
         &__burger {
             height: 13.5px;
         }

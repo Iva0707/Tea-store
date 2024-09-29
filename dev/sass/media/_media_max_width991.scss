@@ -5,7 +5,12 @@
             display: none;
         }
         &__menu {
-            display: none;
+            opacity: 0;
+            position: absolute;
+            visibility: hidden;
+            transition: all .2s;
+            transform: translateX(-100vh);
+            transition: opacity .01s;
         }
 
         &__column {
