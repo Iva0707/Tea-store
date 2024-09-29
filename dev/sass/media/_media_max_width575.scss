@@ -3,4 +3,42 @@
     [class*="__container"] {
         padding: 0 15px;
     }
+
+    // ____________header____________
+
+    .header {
+        padding: 14px 0;
+
+        &__column {
+            gap: 21px;
+            flex: 0 0 55%;
+        }
+        &__form {
+            margin-right: 13px;
+        }
+        &__input {
+            padding: 7px 25px 7px 11px;
+            line-height: 1;
+            font-size: 0.68rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+        &__form-icon {
+            height: 14px;
+            width: 14px;
+            right: 10px;
+        }
+        &__form-item {
+            height: 12px;
+            width: 12px;
+        }
+        &__profile-item {
+            width: 19px;
+            height: 19px;
+        }
+        &__cart-item {
+            width: 19px;
+            height: 18px;
+        }
+    }
 }
