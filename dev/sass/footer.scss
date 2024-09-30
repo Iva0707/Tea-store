@@ -1,2 +1,58 @@
+.footer {
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__row
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .footer__help
+
+    &__help {
+        flex: 0 1 33.333%;
+    }
+
+    // .footer__menu
+
+    &__menu {
+    }
+    
+    // .footer__link
+    
+    &__link {
+        flex: 0 1 33.333%;
+    }
+    
+    // .footer__pages
+    
+    &__pages {
+        flex: 0 1 33.333%;
+    }
+
+    // .footer__input
+
+    &__input {
+    }
+
+    // .footer__input-box
+
+    &__input-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .footer__rights
+
+    &__rights {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+    }
+}
 
  
