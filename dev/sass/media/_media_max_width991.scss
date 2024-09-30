@@ -17,6 +17,37 @@
             gap: 18px;
         }
     }
+
+    // ____________footer____________
+
+    .footer {
+        &__row {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__help {
+            flex: 1 1 auto;
+        }
+        &__pages {
+            display: none;
+        }
+        &__input {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 40px;
+        }
+        &__input-box {
+            flex: 1 1 50%;
+            & label {
+
+            }
+            & input {
+
+            }
+        }
+    }
 }
 
 
