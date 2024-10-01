@@ -51,12 +51,13 @@ input[type=search] {
       background-color: $color_green-main;
       color: $color_green-additional;
       box-shadow: $shadow_button;
-      transition: .2s;
       &:hover {
+            transition: .2s;
             box-shadow: $shadow_button-hover;
       }
       &:focus,
       &:active {
+            transition: .2s;
             box-shadow: $shadow_button;
             background-color: $color_green-secondary;
       }
@@ -70,10 +71,12 @@ input[type=search] {
             background-color: transparent;
             border: 1px solid $color_green-additional;
             &:hover {
+                  transition: .2s;
                   background-color: transparent;
             }
             &:focus,
             &:active {
+                  transition: .2s;
                   background-color: $color_green-main;
             }
       }

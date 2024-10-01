@@ -48,4 +48,25 @@
             height: 18px;
         }
     }
+
+    // ____________footer____________
+    .footer {
+        padding: 16px 0px;
+        &__row {
+            gap: 10px;
+        }
+        &__input-label {
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+        }
+        &__input-item {
+            font-size: 0.56rem;
+        }
+        &__subtitle {
+            font-size: 0.75rem;
+        }
+        &__button {
+            font-size: 0.93rem;
+        }
+    }
 }

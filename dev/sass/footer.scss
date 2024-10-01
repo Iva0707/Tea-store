@@ -12,8 +12,8 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 85px;
-        gap: 20px;
+        margin-bottom: 81px;
+        gap: 40px;
     }
 
     // .footer__help
@@ -27,7 +27,6 @@
     &__menu {
     }
     
-    // .footer__link-item
     // .footer__link
     &__link {
         &:not(:last-child) {
@@ -35,6 +34,7 @@
         }
     }
     
+    // .footer__link-item
     &__link-item {
         font-weight: 500;
         font-size: 1.25rem;
@@ -69,9 +69,73 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        & input {
-            width: 100%;
+        margin-bottom: 8px;
+    }
+    
+    // footer__input-label
+    &__input-label {
+        font-size: 1.25rem;
+        line-height: 1.9;
+        letter-spacing: 0.01em;
+        margin-bottom: 16px;
+    }
+
+    // .footer__input-row
+    &__input-row {
+        width: 100%;
+        position: relative;
+    }
+
+    // .footer__label-icon 
+    &__label-icon {
+        position: absolute;
+        top: 50%;
+        right: 42px;
+        transform: translate(0, -50%);
+        max-width: 30px;
+        max-height: 30px;
+
+    }
+    // .footer__input-icon
+    &__input-icon {
+        width: 24px;
+        height: 24px;
+        cursor: text;
+    }
+    // .footer__input-item
+    &__input-item {
+        width: 100%;
+        border: 2px solid $color_green-secondary;
+        border-radius: 8px;
+        padding: 14.5px 55px 14.5px 40px;
+        line-height: 1.56;
+        letter-spacing: 0.01em;
+        color: $color_green-secondary;
+        font-size: 1.02rem;
+        &::placeholder {
+            color: $color_green-secondary;
+            line-height: 1.56;
+            letter-spacing: 0.05em;
         }
+        &:hover,
+        &:focus {
+              border: 2px solid $color_green-additional;
+              box-shadow: $shadow_input-hover
+        }
+        &:active {
+              box-shadow: none;
+        }
+    }
+    
+    // .footer__button-box
+    &__button-box {
+
+    }
+
+    // .footer__input-button
+    &__button {
+        width: 100%;
+        // transition: min-width 0s;
     }
 
     // .footer__rights

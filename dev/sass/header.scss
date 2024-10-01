@@ -164,6 +164,8 @@ body {
         line-height: 1.56;
         letter-spacing: 0.01em;
         cursor: pointer;
+        padding-left: 17px;
+        margin-left: -17px;
         transform: translateX(-100vh);
         transition: transform .2s;
         &.header__burger-open {
