@@ -51,22 +51,38 @@
 
     // ____________footer____________
     .footer {
-        padding: 16px 0px;
+        padding: 13px 0px 23px;
         &__row {
             gap: 10px;
+            margin-bottom: 21px;
         }
         &__input-label {
             font-size: 0.75rem;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
+        }
+        &__input-icon {
+            width: 13px;
+            height: 12px;
         }
         &__input-item {
             font-size: 0.56rem;
+            border-radius: 4px;
+            padding: 12px 40px 12px 13px;
         }
         &__subtitle {
             font-size: 0.75rem;
+            &::before {
+                height: 13px;
+                width: 14px;
+                bottom: 5px;
+            }
         }
         &__button {
             font-size: 0.93rem;
+            padding: 11.5px 13px;
+        }
+        &__rights {
+            font-size: 0.5rem;
         }
     }
 }
