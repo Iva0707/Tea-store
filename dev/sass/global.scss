@@ -85,6 +85,146 @@
       }
 }
 
+.input-order {
+      border: 2px solid $color_green-secondary;
+      border-radius: 8px;
+      padding: 16px 301px 16px 40px;
+      background-color: $color_white;
+      line-height: 1.56;
+      letter-spacing: 0.01em;
+      color: $color_green-secondary;
+      transition: .3s;
+      max-width: 519px;
+      max-height: 92px;
+      font-weight: 400;
+      &__box{
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+      }
+      &::placeholder {
+            color: $color_green-secondary;
+      }
+      &__title{
+            color:$color_khaki;
+            line-height: 1.56;
+            display: inline;
+            font-family: $font-main-montserat, sans-serif;
+            font-size: 20px;
+            font-weight: 400;    
+      }
+      &:hover,
+      &:focus {
+            border: 2px solid $color_green-additional;
+            box-shadow: 4px 4px 10px 0 #00000040;
+      }
+      &:active {
+            box-shadow: none;
+      }
+}
+
+.input-profile{
+      border: 2px solid $color_green-secondary;
+      border-radius: 8px;
+      padding: 16px 301px 16px 40px;
+      background-color: $color_white;
+      line-height: 1.56;
+      letter-spacing: 0.01em;
+      color: $color_green-secondary;
+      transition: .3s;
+      max-width: 519px;
+      max-height: 92px;
+      font-weight: 400;
+      &__btn{
+            position: absolute;
+            right: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            color: #1E4A0D;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 10px;
+            line-height: 15px;
+            font-family: $font-main-montserat;
+            font-weight: 500;
+            
+      }
+      &__box{
+            max-width: 520px;
+            position: relative;
+      }
+      &__item{
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 95px;
+      }
+      &__title{
+            color:$color_khaki;
+            line-height: 1.56;
+            display: inline;
+            font-family: $font-main-montserat, sans-serif;
+            font-size: 20px;
+            font-weight: 400;     
+      }
+      &:hover,
+      &:focus {
+            border: 2px solid $color_green-additional;
+            box-shadow: 4px 4px 10px 0 #00000040;
+      }
+      &:active {
+            box-shadow: none;
+      }
+}
+
+.radio{
+      &__box{
+            max-width: 565px;
+            max-height: 37px;
+            display: flex;
+            gap: 22px;
+      }
+      appearance: none;
+      display: inline-block;
+      position: relative;
+      border: 1px solid $color_green-additional;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      &:checked {
+            background-color: $color_green-main;
+      }
+      &:hover{
+            cursor: pointer;
+      }
+      &::before{
+            content: '';
+            width: 50%;
+            height: 50%;
+            background-color: $color_green-additional;
+            border-radius: 50%;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            display: none;
+      }
+      &:checked::before{
+            display: block;
+      }
+      &__text{
+            font-size: 30px;
+            color: $color_green-secondary;
+            font-family: $font-main-montserat, sans-serif;
+            line-height: 36px;
+            font-weight: 400;
+            max-width: 510px;
+      }
+}
+
 // -------------------------markup-------------------------
 .markup {
       background: $color_gradient;
@@ -105,6 +245,13 @@
             box-shadow: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26, 4px 4px 10px 0 #3b3b3b40;
 
 	}
+      &__element-check{
+            grid-column: 1/3;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: $color_disable-secondary;
+            box-shadow: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26, 4px 4px 10px 0 #3b3b3b40;
+      }
 	// .markup__title
 	&__title {
             font-size: 34px;
@@ -194,7 +341,7 @@
 
 .titles,
 .buttons,
-.inputs {
+.inputs{
       // .titles__item
       &__item {
             display: flex;
