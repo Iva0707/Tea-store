@@ -1,3 +1,88 @@
-@media screen and (max-width: 575px) {
-    
+@media screen and (max-width: 575.98px) {
+    // ____________global____________
+    [class*="__container"] {
+        padding: 0 15px;
+    }
+
+    // ____________header____________
+
+    .header {
+        padding: 14px 0;
+        &__menu {
+            &.header__burger-open {
+                top: 52px;
+            }
+        }
+        &__burger {
+            height: 13.5px;
+        }
+        &__column {
+            gap: 21px;
+            flex: 0 0 55%;
+        }
+        &__form {
+            margin-right: 13px;
+        }
+        &__input {
+            padding: 7px 25px 7px 11px;
+            line-height: 1;
+            font-size: 0.68rem;
+            border-radius: 4px;
+            letter-spacing: 0.05em;
+        }
+        &__form-icon {
+            height: 14px;
+            width: 14px;
+            right: 10px;
+        }
+        &__form-item {
+            height: 12px;
+            width: 12px;
+        }
+        &__profile-item {
+            width: 19px;
+            height: 19px;
+        }
+        &__cart-item {
+            width: 19px;
+            height: 18px;
+        }
+    }
+
+    // ____________footer____________
+    .footer {
+        padding: 13px 0px 23px;
+        &__row {
+            gap: 10px;
+            margin-bottom: 21px;
+        }
+        &__input-label {
+            font-size: 0.75rem;
+            margin-bottom: 5px;
+        }
+        &__input-icon {
+            width: 13px;
+            height: 12px;
+        }
+        &__input-item {
+            font-size: 0.56rem;
+            border-radius: 4px;
+            padding: 12px 40px 12px 13px;
+        }
+        &__subtitle {
+            font-size: 0.75rem;
+            &::before {
+                height: 13px;
+                width: 14px;
+                bottom: 5px;
+            }
+        }
+        &__button {
+            font-size: 0.93rem;
+            padding: 11.5px 13px;
+        }
+        &__rights {
+            font-size: 0.5rem;
+        }
+    }
 }
