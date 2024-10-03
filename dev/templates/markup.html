@@ -97,6 +97,31 @@
             </div>
         </div>
         <div class="markup__element">
+            <h2 class="markup__title">Text</h2>
+            <div class="markup__column text">
+                <div class="text__item">
+                    <h3 class="section-title">Section Title (h3)</h3>
+                    <span>40px / montserrat / .section-title</span>
+                </div>
+                <div class="text__item">
+                    <h2 class="body-text">Body Text #1</h2>
+                    <span>30px / montserrat / body-text</span>
+                </div>
+                <div class="text__item">
+                    <h2 class="body-text body-text--second">Body Text #2</h2>
+                    <span>20px / montserrat / body-text body-text--second</span>
+                </div>
+                <div class="text__item">
+                    <h2 class="card-text">Card Text</h2>
+                    <span>20px / montserrat / .card-text</span>
+                </div>
+                <div class="text__item">
+                    <h3 class="small-text">Small Text</h3>
+                    <span>16px / montserrat / .small-text</span>
+                </div>
+            </div>
+        </div>
+        <div class="markup__element">
             <h2 class="markup__title">Buttons</h2>
             <div class="markup__column buttons">
                 <div class="buttons__item">
@@ -156,16 +181,27 @@
         <div class="markup__element">
             <h2 class="markup__title">Goods Card</h2>
             <div class="markup__column card">
-                <div class="card__img">
-                    <img src="../assets/img/1.webp" alt="goods">
+                <figure class="card__img">
+                    <picture>
+                        <source srcset="../assets/img/card_black-tea.webp" type="image/webp">
+                        <source srcset="../assets/img/card_black-tea.jpg" type="image/jpeg">
+                        <img src="../assets/img/card_black-tea.jpg" alt="Чорний чай" />
+                    </picture>
+                </figure>
+                <div class="card__content">
+                    <h3 class="card__title">Назва товару</h3>
+                    <div class="card__icons icons-card">
+                        <button class="icons-card__like" aria-label="Додати до улюблених">
+                            <img src="../assets/img/card/icons/like.svg" alt="Значок улюбленого" />
+                        </button>
+                        <button class="icons-card__cart" aria-label="Додати в кошик">
+                            <img src="../assets/img/card/icons/cart.svg" alt="Значок кошика" />
+                        </button>
+                    </div>
+                    <p class="card__weight">50 гр</p>
+                    <p class="card__price">145 грн</p>
                 </div>
-                <h3 class="card__title">Назва</h3>
-                <div class="card__icons icons-card">
-                    <div class="icons-card__like"></div>
-                    <div class="icons-card__cart"></div>
-                </div>
-                <div class="card__weigth">50 гр</div>
-                <div class="card__price">145 грн</div>
             </div>
+
         </div>
 </section>
