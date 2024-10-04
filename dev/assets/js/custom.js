@@ -61,6 +61,14 @@ const swiper = new Swiper('.hero__swiper', {
         enabled: true,
         onlyInViewport: true,
     },
+    spaceBetween: 30,
+    breakpoints: {
+        991.98: {
+            // spaceBetween: 0,
+        },
+
+    },
 
     speed: 800,
+
   });
