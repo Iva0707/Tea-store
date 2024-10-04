@@ -598,3 +598,63 @@ input[type=search] {
       font-weight: 500;
       line-height: 2.5rem; // 40px
 }
+
+//=============== Card Goods ===============//
+
+.card-goods {
+      // .card-goods__content
+
+      &__content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            row-gap: 16px;
+      }
+
+      // .card-goods__img
+
+      &__img {
+            &:not(:last-child) {
+                  margin-bottom: 16px;
+            }
+
+            img {
+                  border-radius: 18px;
+                  max-width: 100%;
+            }
+      }
+
+      // .card-goods__title
+
+      &__title {
+            justify-self: flex-start;
+      }
+
+      // .card-goods__icons
+
+      &__icons {
+            display: flex;
+            gap: 8px;
+            justify-self: flex-end;
+      }
+
+      // .card-goods__weight
+
+      &__weigth {
+            justify-self: flex-start;
+      }
+
+      // .card-goods__price
+
+      &__price {
+            justify-self: flex-end;
+      }
+
+      // card-goods__icon-like
+
+      &__icon-like {}
+
+      // card-goods__icon-cart
+
+      &__icon-cart {}
+}
