@@ -1,8 +1,34 @@
-///fonts///
-$font-primary: "Open Sans";
-$font-secondary:  "monospace";
-$font-size: 16px;
+// -------------------------fonts-------------------------
 
-///colors///
-$primary-color: #222;
-$secondary-color: #f00;
+$font-main-montserat: 'Montserrat';
+
+$font-inter: 'Inter';
+$font-lato: 'Lato';
+$font-playfair: 'Playfair Display';
+$font-poppins: 'Poppins';
+
+// -------------------------colors-------------------------
+$color_green-main: #D0EDC4;
+$color_green-secondary: #99C487;
+$color_green-additional: #1E4A0D;
+$color_green-accent: #34C357;
+$color_green-bg: #A6B3A1;
+
+$color_white: #ffffff;
+$color_black: #414141;
+$color_beige: #FCF2E2;
+$color_khaki: #847D52;
+$color_orange: #F48726;
+$color_grey: #A2A2A2;
+
+$color_error: #DB1B1B;
+$color_disable: #CDCBC9;
+$color_disable-secondary: #EFECEC;
+
+$color_gradient: linear-gradient(180deg, #d0edc4 0%, #86aa78 100%);
+$color_gradient-secondary: linear-gradient(90deg, #1e4a0d 0%, #99c487 100%);
+$color_gradient-additional: linear-gradient(90deg, #34c357 0%, #339580 34.5%, #22e165 100%);
+
+$shadow_button: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26;
+$shadow_button-hover: 0 2px 4px 0 #3b3b3b33, inset 0 -2px 4px 0 #3b3b3b26, 4px 4px 10px 0 #3b3b3b40;
+$shadow_input-hover: 4px 4px 10px 0 #00000040;
