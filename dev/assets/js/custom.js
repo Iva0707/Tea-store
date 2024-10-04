@@ -41,3 +41,26 @@ function closeMenu () {
     headerNav.classList.remove('header__burger-open');
     body.classList.remove('header__burger-open');
 }
+
+//___________swiper______________
+
+const swiper = new Swiper('.hero__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    touchRatio: 3,
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+    speed: 800,
+  });

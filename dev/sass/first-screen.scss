@@ -1,0 +1,131 @@
+section.hero, .hero {
+    padding: 0;
+
+    // .hero__container
+
+    // .hero__swiper
+    // .swiper
+
+    &__swiper {
+        width: 100%;
+        height: calc(100vh - 79px);
+
+    }
+
+    // .hero__wrapper
+    //.swiper-wrapper
+
+    &__wrapper {
+    }
+}
+
+section.hero .swiper {
+    
+    //.swiper-pagination
+    &-pagination {
+        bottom: 16px;
+        &-bullet {
+            width: 24px;
+            height: 24px;
+            background-color: $color_green-main;
+            opacity: 1;
+            &:hover {
+                box-shadow: $shadow_button;
+                transition: .2s;
+            }
+            &-active {
+                background-color: $color_green-additional;   
+            }
+        }
+    }
+}
+
+// .swiper-slide
+.slide {
+    position: relative;
+
+    // .slide__img-box
+
+    &__img-box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        min-height: 100%;
+    }
+    
+    // .slide__img
+    
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-position: left;
+    }
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        
+    }
+    // .slide__content
+    
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        max-width: 525px;
+        margin-left: auto;
+        padding: 40px 0;
+    }
+
+    // .slide__title
+
+    &__title {
+        font-family: $font-playfair;
+        font-weight: 500;
+        font-size: 6rem; 
+        background: $color_gradient-additional;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.35em;
+        &-second {
+            font-weight: 500;
+            font-family: $font-playfair;
+            margin-bottom: 0.35em;
+            font-size: 3rem;
+            color: $color_orange;
+            & span {
+                color: $color_error;
+            }
+        }
+    }
+
+    // .slide__subtitle
+
+    &__subtitle {
+        line-height: 1.2;
+    }
+
+    // .slide__text
+
+    &__text {
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+
+    // .slide__btn
+
+    &__btn {
+        // width: 100%;
+        // min-width: 100%;
+        // max-width: 211px;
+    }
+}
