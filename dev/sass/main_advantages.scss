@@ -1,33 +1,21 @@
 .advantages {
-
-    // .advantages__container
-
-    // &__container {
-    // }
-
     // .advantages__row
-
     &__row {
-        padding: 16px 10px;
+        padding: 16px 0px;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
-        gap: 10px;
         flex-wrap: wrap;
     }
-
     // .advantages__item
-
     &__item {
-        flex: 0 0 210px;
+        padding: 10px;
+        flex: 0 0 230px;
         display: flex;
         flex-direction: column;
         gap: 16px;
         align-items: center;
     }
-    
     // .advantages__img-box
-    
     &__img-box {
         width: 100%;
         max-width: 140px;
@@ -45,13 +33,13 @@
             left: 0;
             object-position: center;
         }
-        
     }
-    
     // .advantages__text
-    
     &__text {
-        flex-grow: 1;
+        flex: 1 1 auto;
         text-align: center;
+        & p:not(:last-child) {
+            margin-bottom: 10px;
+        }
     }
 }
