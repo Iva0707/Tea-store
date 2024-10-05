@@ -15,6 +15,7 @@ body {
     }
     &.header__burger-open {
         overflow: hidden;
+        height: 100svh;
         &::before {
             width: 100%;
             visibility: visible;

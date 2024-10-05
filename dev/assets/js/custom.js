@@ -11,6 +11,13 @@ burger.addEventListener('click', () => {
         burgerText.classList.toggle('header__burger-open');
         headerNav.classList.toggle('header__burger-open');
         body.classList.toggle('header__burger-open');
+        headerNav.innerHTML = (
+                    `<li class="header__link"><a class="header__link-item" href="index.html">Головна</a></li>
+                    <li class="header__link"><a class="header__link-item" href="#">Каталог</a></li>
+                    <li class="header__link"><a class="header__link-item" href="#">Новинки</a></li>
+                    <li class="header__link"><a class="header__link-item" href="#">Про нас</a></li>
+                    <li class="header__link"><a class="header__link-item" href="#">Зроби сам</a></li>`
+        )
     } else {
           closeBurger ()
     }
@@ -37,6 +44,12 @@ window.addEventListener('resize', burgerResize);
 burgerResize();
 
 function closeBurger () {
+    headerNav.innerHTML = (
+        `<li class="header__link"><a class="header__link-item" href="#">Каталог</a></li>
+        <li class="header__link"><a class="header__link-item" href="#">Новинки</a></li>
+        <li class="header__link"><a class="header__link-item" href="#">Про нас</a></li>
+        <li class="header__link"><a class="header__link-item" href="#">Зроби сам</a></li>`
+    );
     burger.classList.remove('header__burger-open');
     burgerText.classList.remove('header__burger-open');
     headerNav.classList.remove('header__burger-open');
