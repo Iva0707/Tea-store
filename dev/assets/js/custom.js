@@ -97,10 +97,6 @@ footerButton.addEventListener('click', () => {
         footerNav.classList.toggle('footer__help-active');
         footerMenu.classList.toggle('footer__help-active');
         getMenuHeight ();
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
     } else {
         closeFooterNav ()
     }
@@ -126,6 +122,10 @@ function getMenuHeight () {
     const height = window.getComputedStyle(footerMenu).height;
     const newHeight = parseInt(height) + 50;    
     footerNav.style.height = `${newHeight}px`;
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth',
+    });
 };
 
 function closeFooterNav () {

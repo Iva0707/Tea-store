@@ -1,38 +1,23 @@
 .footer {
     background-color: $color_green-bg;
     padding: 32px 0px;
-    // .footer__container
-
-    &__container {
-    }
-
     // .footer__row
-
     &__row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 81px;
         gap: 40px;
     }
-
     // .footer__help
-
     &__help {
         flex: 0 1 33.333%;
     }
-
-    // .footer__menu
-
-    &__menu {
-    }
-    
     // .footer__link
     &__link {
         &:not(:last-child) {
             margin-bottom: 16px;
         }
     }
-    
     // .footer__link-item
     &__link-item {
         font-weight: 500;
@@ -45,36 +30,28 @@
             color: $color_green-main;
         } 
     }
-    
     // .footer__pages
-    
     &__pages {
         flex: 0 1 33.333%;
     }
     // .footer__subtitle
-    
     &__subtitle {
         font-size: 1.25rem;
         line-height: 1.9;
         letter-spacing: 0.01em;
         margin-bottom: 16px;
     }
-
     // .footer__input
-
     &__input {
         flex: 0 1 33.333%;
     }
-
     // .footer__input-box
-
     &__input-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 8px;
     }
-    
     // footer__input-label
     &__input-label {
         font-size: 1.25rem;
@@ -82,13 +59,11 @@
         letter-spacing: 0.01em;
         margin-bottom: 16px;
     }
-
     // .footer__input-row
     &__input-row {
         width: 100%;
         position: relative;
     }
-
     // .footer__label-icon 
     &__label-icon {
         position: absolute;
@@ -97,7 +72,6 @@
         transform: translate(0, -50%);
         max-width: 30px;
         max-height: 30px;
-
     }
     // .footer__input-icon
     &__input-icon {
@@ -129,20 +103,11 @@
               box-shadow: none;
         }
     }
-    
-    // .footer__button-box
-    &__button-box {
-
-    }
-
     // .footer__input-button
     &__button {
         width: 100%;
-        // transition: min-width 0s;
     }
-
     // .footer__rights
-
     &__rights {
         width: 100%;
         text-align: center;
@@ -153,5 +118,3 @@
         letter-spacing: -0.01em;
     }
 }
-
- 

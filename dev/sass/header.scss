@@ -7,13 +7,14 @@ body {
         height: 100vh;
         background-color: $color_white;
         z-index: 5;
-        transform: 0;
+        transform: none;
         opacity: 0;
         visibility: hidden;
         width: 0;
         transition: .2s;
     }
     &.header__burger-open {
+        overflow: hidden;
         &::before {
             width: 100%;
             visibility: visible;
@@ -21,7 +22,6 @@ body {
         }
     }
 }
-
 
 .header {
     padding: 17.5px 0;

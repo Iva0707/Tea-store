@@ -1,5 +1,13 @@
 // ============index.html============
-// ____________haro____________ 
+// ____________hero____________ 
+@media screen and (max-width: 400px) {
+    .footer {
+        &__input {
+            gap: 5px;
+        }
+    }
+}
+
 @media screen and (max-height: 601px) and (orientation: landscape) {
     section.hero, .hero {
         padding: 32px 0;
