@@ -4,6 +4,12 @@
         padding: 0 15px;
     }
 
+    .home {
+        & section {
+              padding: 16px 0px;
+        }
+    }
+
     // ____________header____________
     .header {
         padding: 14px 0;
@@ -79,6 +85,15 @@
         &__button {
             font-size: 0.93rem;
             padding: 11.5px 13px;
+        }
+        &__menu {
+            top: 35px;
+        }
+        &__link-item {
+            font-size: 0.75rem; //12
+            :not(:last-child) {
+                margin-bottom: 5px;
+            }
         }
         &__rights {
             font-size: 0.5rem;

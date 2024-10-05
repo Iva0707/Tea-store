@@ -28,12 +28,22 @@
         &__help {
             flex: 1 1 auto;
             width: 100%;
+            position: relative;
+            height: auto;
+
+            &-active {
+                &.footer__subtitle:before {
+                    transition: .2s;
+                    transform: rotate(180deg);
+                }
+            }
         }
 
         &__subtitle {
             position: relative;
             cursor: pointer;
             margin-bottom: 0;
+            background-color: transparent;
             &::after {
                 position: absolute;
                 content: '';
@@ -45,6 +55,7 @@
                 right: 0;
             }
             &:before {
+                transition: .2s;
                 position: absolute;
                 content: '';
                 background: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.95979 4.97491L6.69979 8.23492C6.31479 8.61992 5.6848 8.61992 5.2998 8.23492L2.03979 4.97491' stroke='%23414141' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E") no-repeat;
@@ -53,13 +64,34 @@
                 bottom: 0;
                 right: 0;
             }
-            &.active:before {
-                transition: .2s;
-                transform: rotate(180deg);
-            }
         }
         &__menu {
-            display: none;
+            // transition: .3s;
+            transform: translateY(-100%);
+            position: absolute;
+            top: 50px;
+            left: 0;
+            z-index: -10;
+            opacity: 0;
+            & li a {
+
+            }
+
+            &.footer__help-active {
+                transition: ease-in-out .3s;
+                // display: none;
+                width: 100%;
+                transform: translate(0);
+                z-index: 0;
+                opacity: 1;
+            }
+        }
+
+        &__link-item {
+            font-size: 1.12rem; //18
+            :not(:last-child) {
+                margin-bottom: 10px;
+            }
         }
         &__pages {
             display: none;

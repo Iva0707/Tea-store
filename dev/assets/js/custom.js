@@ -12,66 +12,119 @@ burger.addEventListener('click', () => {
         headerNav.classList.toggle('header__burger-open');
         body.classList.toggle('header__burger-open');
     } else {
-          closeMenu ()
+          closeBurger ()
     }
-})
+});
 
 burgerText.addEventListener('click', () => {
-    closeMenu()
-})
+    closeBurger()
+});
 
 headerNav.addEventListener('click', (event) => {
     if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON' || event.target.tagName === 'IMG') {
-        closeMenu ();
+        closeBurger ();
     }
-})
+});
 
 function resize () {
     const screenWidth = window.innerWidth;
     if (screenWidth > 991.98) {
-        closeMenu ();
+        closeBurger ();
     }
-}
+};
+
 window.addEventListener('resize', resize);
 resize();
 
-function closeMenu () {
+function closeBurger () {
     burger.classList.remove('header__burger-open');
     burgerText.classList.remove('header__burger-open');
     headerNav.classList.remove('header__burger-open');
     body.classList.remove('header__burger-open');
-}
+};
 
 //___________swiper hero______________
 
-const swiperHero = new Swiper('.hero__swiper', {
-    direction: 'horizontal',
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    touchRatio: 3,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-    },
-    spaceBetween: 30,
-    speed: 800,
-  });
+const heroSwiperPage =()=> {
+    const swiperHero = new Swiper('.hero__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        touchRatio: 3,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        spaceBetween: 30,
+        speed: 800,
+    });
 
-function swiperHeight() {
-    const height = window.innerHeight;
-    const width = window.innerWidth;
-    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+    function swiperHeight() {
+        const height = window.innerHeight;
+        const width = window.innerWidth;
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
 
-    if (height <= 601 && isLandscape && width >= 1040) {
-        swiperHero.params.spaceBetween = 80;
-    } else {
-        swiperHero.params.spaceBetween = 30;
+        if (height <= 601 && isLandscape && width >= 1040) {
+            swiperHero.params.spaceBetween = 80;
+        } else {
+            swiperHero.params.spaceBetween = 30;
+        }
+        swiperHero.update();
     }
-    swiperHero.update();
+
+    window.addEventListener('resize', swiperHeight);
+    swiperHeight();
+    }
+
+document.querySelector('.home') ? heroSwiperPage() : null;
+
+
+//___________footer______________
+
+const footerNav = document.getElementById('footer_nav');
+const footerButton = document.getElementById('footer_subtitle');
+const footerMenu = document.getElementById('footer_menu');
+
+footerButton.addEventListener('click', () => {
+    footerButton.classList.toggle('footer__help-active');
+    if (footerButton.classList.contains('footer__help-active')) {
+        footerNav.classList.toggle('footer__help-active');
+        footerMenu.classList.toggle('footer__help-active');
+        getMenuHeight ();
+    } else {
+        closeFooterNav ()
+    }
+});
+
+
+footerNav.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON' || event.target.tagName === 'IMG') {
+        closeFooterNav ();
+    }
+});
+
+function resize () {
+    const screenWidth = window.innerWidth;
+    if (screenWidth > 991.98) {
+        closeFooterNav ();
+    }
+};
+
+window.addEventListener('resize', resize);
+resize();
+
+function getMenuHeight () {
+    const height = window.getComputedStyle(footerMenu).height;
+    const newHeight = parseInt(height) + 50;    
+    footerNav.style.height = `${newHeight}px`;
 }
 
-window.addEventListener('resize', swiperHeight);
-swiperHeight();
+function closeFooterNav () {
+    footerNav.classList.remove('footer__help-active');
+    footerButton.classList.remove('footer__help-active');
+    footerMenu.classList.remove('footer__help-active');
+    footerNav.style.height = `auto`;
+}
