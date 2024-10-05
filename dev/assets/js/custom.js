@@ -26,15 +26,15 @@ headerNav.addEventListener('click', (event) => {
     }
 });
 
-function resize () {
+function burgerResize () {
     const screenWidth = window.innerWidth;
     if (screenWidth > 991.98) {
         closeBurger ();
     }
 };
 
-window.addEventListener('resize', resize);
-resize();
+window.addEventListener('resize', burgerResize);
+burgerResize();
 
 function closeBurger () {
     burger.classList.remove('header__burger-open');
@@ -46,21 +46,22 @@ function closeBurger () {
 //___________swiper hero______________
 
 const heroSwiperPage =()=> {
-    const swiperHero = new Swiper('.hero__swiper', {
-        direction: 'horizontal',
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        touchRatio: 3,
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        spaceBetween: 30,
-        speed: 800,
-    });
+    
+const swiperHero = new Swiper('.hero__swiper', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    touchRatio: 3,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    spaceBetween: 30,
+    speed: 800,
+});
 
     function swiperHeight() {
         const height = window.innerHeight;
@@ -81,7 +82,6 @@ const heroSwiperPage =()=> {
 
 document.querySelector('.home') ? heroSwiperPage() : null;
 
-
 //___________footer______________
 
 const footerNav = document.getElementById('footer_nav');
@@ -89,16 +89,22 @@ const footerButton = document.getElementById('footer_subtitle');
 const footerMenu = document.getElementById('footer_menu');
 
 footerButton.addEventListener('click', () => {
-    footerButton.classList.toggle('footer__help-active');
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 991.98) {
+        footerButton.classList.toggle('footer__help-active');
+    }
     if (footerButton.classList.contains('footer__help-active')) {
         footerNav.classList.toggle('footer__help-active');
         footerMenu.classList.toggle('footer__help-active');
         getMenuHeight ();
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
     } else {
         closeFooterNav ()
     }
 });
-
 
 footerNav.addEventListener('click', (event) => {
     if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON' || event.target.tagName === 'IMG') {
@@ -106,25 +112,25 @@ footerNav.addEventListener('click', (event) => {
     }
 });
 
-function resize () {
+function footerResize () {
     const screenWidth = window.innerWidth;
     if (screenWidth > 991.98) {
         closeFooterNav ();
     }
 };
 
-window.addEventListener('resize', resize);
-resize();
+window.addEventListener('resize', footerResize);
+footerResize();
 
 function getMenuHeight () {
     const height = window.getComputedStyle(footerMenu).height;
     const newHeight = parseInt(height) + 50;    
     footerNav.style.height = `${newHeight}px`;
-}
+};
 
 function closeFooterNav () {
-    footerNav.classList.remove('footer__help-active');
-    footerButton.classList.remove('footer__help-active');
-    footerMenu.classList.remove('footer__help-active');
-    footerNav.style.height = `auto`;
+        footerButton.classList.remove('footer__help-active');
+        footerNav.classList.remove('footer__help-active');
+        footerMenu.classList.remove('footer__help-active');
+        footerNav.style.height = `auto`;
 }

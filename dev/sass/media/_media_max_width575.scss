@@ -57,9 +57,12 @@
     // ____________footer____________
     .footer {
         padding: 13px 0px 23px;
+        &:after {
+            height: 114px;
+        }
         &__row {
             gap: 10px;
-            margin-bottom: 21px;
+            margin-bottom: 20px;
         }
         &__input-label {
             font-size: 0.75rem;
@@ -87,14 +90,22 @@
             padding: 11.5px 13px;
         }
         &__menu {
-            top: 35px;
-        }
-        &__link-item {
-            font-size: 0.75rem; //12
-            :not(:last-child) {
+            &.footer__help-active {
+                top: 35px;
+            }
+        }   
+
+        &__link {
+            &:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
+        
+        &__link-item {
+            font-size: 0.75rem; //12
+        }
+
+
         &__rights {
             font-size: 0.5rem;
         }
