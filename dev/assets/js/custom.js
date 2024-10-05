@@ -56,9 +56,6 @@ const swiperHero = new Swiper('.hero__swiper', {
         enabled: true,
         onlyInViewport: true,
     },
-    mousewheel: {
-        invert: true,
-    },
     spaceBetween: 30,
     speed: 800,
   });
