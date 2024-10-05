@@ -42,33 +42,39 @@ function closeMenu () {
     body.classList.remove('header__burger-open');
 }
 
-//___________swiper______________
+//___________swiper hero______________
 
-const swiper = new Swiper('.hero__swiper', {
-    // Optional parameters
+const swiperHero = new Swiper('.hero__swiper', {
     direction: 'horizontal',
     loop: true,
-  
-    // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
-
     touchRatio: 3,
-
     keyboard: {
         enabled: true,
         onlyInViewport: true,
     },
-    spaceBetween: 30,
-    breakpoints: {
-        991.98: {
-            // spaceBetween: 0,
-        },
-
+    mousewheel: {
+        invert: true,
     },
-
+    spaceBetween: 30,
     speed: 800,
-
   });
+
+function swiperHeight() {
+    const height = window.innerHeight;
+    const width = window.innerWidth;
+    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+
+    if (height <= 601 && isLandscape && width >= 1040) {
+        swiperHero.params.spaceBetween = 80;
+    } else {
+        swiperHero.params.spaceBetween = 30;
+    }
+    swiperHero.update();
+}
+
+window.addEventListener('resize', swiperHeight);
+swiperHeight();

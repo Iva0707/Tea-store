@@ -1,0 +1,76 @@
+// ============index.html============
+// ____________haro____________ 
+@media screen and (max-height: 601px) and (orientation: landscape) {
+    section.hero, .hero {
+        padding: 32px 0;
+        &__swiper {
+            margin: 0 auto;
+            padding: 0 2.87% 5px;
+            width: 100%;
+            overflow: hidden;
+            height: 400px;
+        }
+        & .slide {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 100%;
+            box-shadow: $shadow_button;
+            &__img-box {
+                height: calc(100% - 4px);
+                width: calc(100% - 4px);
+                top: 2px;
+                left: 2px;
+                right: 2px;
+                bottom: 2px;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    height: calc(100% + 4px);
+                    width: calc(100% + 4px);
+                    background: $color_gradient;
+                    top: -2px;
+                    left: -2px;
+                }
+            }
+            &__img {
+                border-radius: 16px;
+                background-color: $color_white;
+            }
+            &__container {
+                display: flex;
+            }
+            &__content {
+                flex: 0 1 50%;
+                gap: 8px;
+                padding: 20px 0;
+            }
+            &__title {
+                font-size: 3.12rem; //50
+                &-second {
+                    font-size: 1.7rem; //28
+                }
+            }
+            &__subtitle {
+                font-size: 1.25rem; //20
+            }
+            &__text {
+                font-size: 1rem; //16
+                line-height: 1.5;
+            }
+            &__btn {
+                min-width: 129px;
+                align-self: flex-end;
+                font-size: 0.87rem; //14
+            }
+        }
+    }
+    section.hero .swiper {
+        &-pagination {
+            bottom: 14px;
+            &-bullet {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

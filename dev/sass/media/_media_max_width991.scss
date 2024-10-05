@@ -19,7 +19,6 @@
     }
 
     // ____________footer____________
-
     .footer {
         &__row {
             flex-direction: column-reverse;
@@ -59,7 +58,6 @@
                 transform: rotate(180deg);
             }
         }
-
         &__menu {
             display: none;
         }
@@ -86,15 +84,10 @@
         }
     }
 
-
-
     // ==================index.html==================
-
-    // ____________haro____________ 
-
+    // ____________hero____________ 
     section.hero, .hero {
         padding: 32px 0;
-
         &__swiper {
             margin: 0 auto;
             padding: 0 2.87% 5px;
@@ -102,10 +95,6 @@
             overflow: hidden;
             height: 450px;
         }
-    
-        &__wrapper {
-        }
-
         & .slide {
             border-radius: 16px;
             overflow: hidden;
@@ -128,16 +117,13 @@
                     left: -2px;
                 }
             }
-            
             &__img {
                 border-radius: 16px;
                 background-color: $color_white;
             }
-                
             &__container {
                 display: flex;
             }
-            
             &__content {
                 flex: 0 1 50%;
                 gap: 8px;
@@ -161,11 +147,9 @@
                 align-self: flex-end;
                 font-size: 0.87rem; //14
             }
-            
         }
     }
     section.hero .swiper {
-        //.swiper-pagination
         &-pagination {
             bottom: 14px;
             &-bullet {
@@ -175,5 +159,3 @@
         }
     }
 }
-
-

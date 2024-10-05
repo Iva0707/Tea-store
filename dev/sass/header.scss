@@ -139,6 +139,7 @@ body {
         display: flex; 
         align-items: center;
         gap: 11px;
+        position: relative;
     }
     // .header__burger-item
     &__burger-item {
@@ -171,10 +172,10 @@ body {
         position: absolute;
         left: -100%;
         &.header__burger-open {
-            transform: translateX(0);
             z-index: 5;
-            top: 0;
+            top: 50%;
             left: 35px;
+            transform: translate(0, -50%);
         }
     }
     // .header__column
@@ -232,6 +233,12 @@ body {
     &__profile-item {
         width: 27px;
         height: 24px;
+        fill: $color_black;
+        &:hover {
+            transition: .2s;
+            transform: scale(1.1);
+            fill: $color_green-additional;
+        }
     }
     // .header__cart
     &__cart {
@@ -243,5 +250,11 @@ body {
     &__cart-item {
         width: 26px;
         height: 23px;
+        fill: $color_black;
+        &:hover {
+            transition: .2s;
+            transform: scale(1.1);
+            fill: $color_green-additional;
+        }
     }
 }
