@@ -8,47 +8,12 @@
         grid-template-columns: repeat(3, minmax(100px, 1fr));
         gap: 22px;
 	}
-	// .goods__item
-	&__item {
-        border-radius: 16px;
-        overflow: hidden;
-        position: relative;
-        transition: .2s;
-        &:hover,
-        &:active,
-        &:focus {
-            box-shadow: $shadow_button-hover;
-        }
-        &:hover .goods__name,
-        &:active .goods__name,
-        &:focus .goods__name {
-            opacity: 1;
-        }
-	}
 	// .goods__name
     &__name {
-        position: absolute;
-        top: 32px;
-        left: 32px;
-        font-weight: 500;
-        color: $color_black;
-        font-size: 1rem;
-        line-height: 1.5;
-        letter-spacing: -0.01em;
-        text-align: center;
-        border-radius: 16px;
-        padding: 8px 16px;
-        min-width: 56%;
-        transition: .2s;
-        margin-right: 32px;
-        background-color: $color_white;
-        opacity: .8;
+        min-width: 145px;
     }
 	// .goods__image
 	&__image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
         aspect-ratio: 1 / 1;
 	}
 }

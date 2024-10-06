@@ -15,6 +15,16 @@
         }
     }
 
+    .product {
+        &-name {
+            font-weight: 400;
+            font-size: 0.5rem;
+            border-radius: 8px;
+            padding: 10px 8px;
+            min-width: 93px;
+        }
+    }
+
     // ____________header____________
     .header {
         padding: 14px 0;
@@ -162,17 +172,24 @@
     }
 
     // ____________goods____________ 
-    .goods {
-        padding-top: 15px;
+    // ____________popular____________ 
+    .goods,
+    .popular {
+        padding-top: 16px;
         &__row {
             padding: 15px 0 23px;
             gap: 15px;
         }
-        &__name {
-            font-weight: 400;
-            font-size: 0.5rem;
-            border-radius: 8px;
-            padding: 10px 8px;
+    }
+
+    // ____________popular____________ 
+    .popular {
+        &__row {
+            & .popular__item:nth-child(n) {
+                & .popular__image {
+                    aspect-ratio: 192 / 206;
+                }
+            }
         }
     }
 }

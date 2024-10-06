@@ -1,0 +1,30 @@
+.popular {
+    padding-top: 32px;
+    background-color: $color_green_main;
+    // .popular__image
+	&__image {
+        aspect-ratio: 308 / 343;
+	}
+	// .popular__row
+	&__row {
+        padding: 32px 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(40px, 1fr));
+        grid-template-rows: repeat( 2, auto);
+        grid-auto-flow: row;
+        gap: 22px;
+        & .popular__item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+            & .popular__image {
+                aspect-ratio: 632 / 702;
+            }
+        }
+        & .popular__item:nth-child(3n + 2) {
+            grid-column: span 2;
+            & .popular__image {
+                aspect-ratio: 632 / 344;
+            }
+        }
+	}
+}
