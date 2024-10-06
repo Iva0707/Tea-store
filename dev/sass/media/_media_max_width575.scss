@@ -6,7 +6,12 @@
 
     .home {
         & section {
-              padding: 16px 0px;
+              margin: 16px 0px;
+        }
+        & .section-title {
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5;
         }
     }
 
@@ -153,6 +158,21 @@
                 width: 10px;
                 height: 10px;
             }
+        }
+    }
+
+    // ____________goods____________ 
+    .goods {
+        padding-top: 15px;
+        &__row {
+            padding: 15px 0 23px;
+            gap: 15px;
+        }
+        &__name {
+            font-weight: 400;
+            font-size: 0.5rem;
+            border-radius: 8px;
+            padding: 10px 8px;
         }
     }
 }

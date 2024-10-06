@@ -1,4 +1,10 @@
 @media screen and (max-width: 767.98px) {
+    .home {
+
+        & .section-title {
+            font-size: 1.8rem;
+        }
+    }
     // ____________footer____________
     .footer {
         &__input-label {
@@ -11,5 +17,16 @@
             padding: 14.5px 55px 14.5px 15px;
         
         } 
+    }
+    // ==================index.html==================
+    // ____________doogs____________ 
+
+    .goods {
+        &__row {
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+        }
+        &__image {
+            aspect-ratio: 190 / 120;
+		}
     }
 }

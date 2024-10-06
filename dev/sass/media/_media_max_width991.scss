@@ -141,7 +141,7 @@
     // ==================index.html==================
     // ____________hero____________ 
     section.hero, .hero {
-        padding: 32px 0;
+        margin: 32px 0;
         &__swiper {
             margin: 0 auto;
             padding: 0 2.87% 5px;
@@ -216,5 +216,14 @@
     // ____________advantages____________ 
     .advantages {
         display: none;
+    }
+
+    // ____________doogs____________ 
+    .goods {
+        &__name {
+            top: 15px;
+            left: 15px;
+            margin-right: 15px;
+        }
     }
 }
