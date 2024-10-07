@@ -1,0 +1,72 @@
+.feedback {
+    padding: 32px 0;
+    background-color: $color_green_bg;
+    
+    // .feedback__container
+    
+    &__container {
+    }
+    
+    // .feedback__title
+    
+    &__title {
+        margin-bottom: 32px;
+    }
+    
+    // .feedback__swiper
+    
+    &__swiper {
+    }
+    
+    // .feedback__wrapper
+    
+    &__wrapper {
+    }
+}
+.slide {
+    background-color: $color_green_main;
+    display: flex;
+
+		// .slide__content
+
+		&__content {
+		}
+
+		// .slide__name
+
+		&__name {
+		}
+
+		// .slide__stars
+
+		&__stars {
+		}
+
+		// .slide__star-full
+
+		&__star-full {
+		}
+
+		// .slide__star-empty
+
+		&__star-empty {
+		}
+
+		// .slide__text
+
+		&__text {
+		}
+
+		// .slide__image-box
+
+		&__image-box {
+		}
+
+		// .slide__photo
+
+		&__photo {
+            width: 100%;
+		}
+}
+.swiper-pagination {
+}

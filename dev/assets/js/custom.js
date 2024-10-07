@@ -60,27 +60,27 @@ function closeBurger () {
 
 const heroSwiperPage =()=> {
     
-const swiperHero = new Swiper('.hero__swiper', {
-    direction: 'horizontal',
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    touchRatio: 3,
-    keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-    },
-    spaceBetween: 30,
-    speed: 800,
-});
-
+    const swiperHero = new Swiper('.hero__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        touchRatio: 3,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        spaceBetween: 30,
+        speed: 800,
+    });
+    
     function swiperHeight() {
         const height = window.innerHeight;
         const width = window.innerWidth;
         const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-
+        
         if (height <= 601 && isLandscape && width >= 1040) {
             swiperHero.params.spaceBetween = 80;
         } else {
@@ -88,10 +88,29 @@ const swiperHero = new Swiper('.hero__swiper', {
         }
         swiperHero.update();
     }
-
+    
     window.addEventListener('resize', swiperHeight);
     swiperHeight();
     }
+
+    //___________swiper feedback______________
+
+    const swiperFeedback = new Swiper('.feedback__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        touchRatio: 3,
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        spaceBetween: 22,
+        speed: 800,
+        slidesPerView: 2,
+    });
 
 document.querySelector('.home') ? heroSwiperPage() : null;
 
@@ -142,8 +161,8 @@ function getMenuHeight () {
 };
 
 function closeFooterNav () {
-        footerButton.classList.remove('footer__help-active');
-        footerNav.classList.remove('footer__help-active');
-        footerMenu.classList.remove('footer__help-active');
-        footerNav.style.height = `auto`;
+    footerButton.classList.remove('footer__help-active');
+    footerNav.classList.remove('footer__help-active');
+    footerMenu.classList.remove('footer__help-active');
+    footerNav.style.height = `auto`;
 }
