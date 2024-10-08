@@ -580,6 +580,11 @@ input[type=search] {
             background-color: $color_orange;
       }
 
+      // .color__view-8_2
+      &__view-8_2 {
+            background-color: $color_yellow;
+      }
+
       // .color__view-9
       &__view-9 {
             background-color: $color_grey;
@@ -613,6 +618,11 @@ input[type=search] {
       // .color__view-15
       &__view-15 {
             background: $color_gradient-additional;
+      }
+
+      // .color__view-16
+      &__view-16 {
+            background: $color_gradient-orange;
       }
 }
 

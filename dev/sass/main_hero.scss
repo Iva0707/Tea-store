@@ -32,8 +32,7 @@ section.hero, .hero {
             top: 50%;
             left: 50%;
             width: 100%;
-            transform: translate(-50%, -50%);
-            
+            transform: translate(-50%, -50%); 
         }
         // .slide__content
         &__content {
@@ -77,6 +76,57 @@ section.hero, .hero {
             margin-bottom: 1rem;
             p:not(:last-child) {
                 margin-bottom: 16px;
+            }
+        }
+        &__third {
+            & .slide__img {
+                object-position: left;
+            }
+            & .slide__container {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+            & .slide__content {
+                display: flex;
+                flex-direction: column;
+                max-width: 564px;
+                gap: 16px;
+                margin-right: auto;
+                margin-left: 0;
+                padding: 38px 32px;
+                background: $color_gradient-orange;
+                border-radius: 16px;
+                height: auto;
+            }
+            & .slide__title {
+                color: $color_error;
+                background: transparent;
+                background-clip: unset;
+                -webkit-background-clip: unset;
+                -webkit-text-fill-color: unset;
+                font-size: 2.5rem;
+                margin-bottom: 0.55em;
+            }
+            & .slide__text {
+                color: $color_white;
+                & span {
+                    color: $color_yellow;
+                }
+                & p:not(:last-child) {
+                    margin-bottom: 11px;
+                }
+            }
+            & .slide__btn {
+                background-color: $color_yellow;
+            }
+            & .slide__image-additoional {
+                position: absolute;
+                top: 0;
+                right: -6.5%;
+                transform: rotate(15deg);
+                width: 27%;
+                height: auto;
             }
         }
     }
