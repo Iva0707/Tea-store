@@ -188,6 +188,7 @@
             & .popular__item:nth-child(n) {
                 & .popular__image {
                     aspect-ratio: 192 / 206;
+                    max-height: 205px;
                 }
             }
         }

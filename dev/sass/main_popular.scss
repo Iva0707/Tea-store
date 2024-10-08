@@ -3,7 +3,7 @@
     background-color: $color_green_main;
     // .popular__image
 	&__image {
-        aspect-ratio: 308 / 343;
+        aspect-ratio: 1 / 1;
 	}
 	// .popular__row
 	&__row {
@@ -17,13 +17,13 @@
             grid-column: span 2;
             grid-row: span 2;
             & .popular__image {
-                aspect-ratio: 632 / 702;
+                aspect-ratio: 1 / 1;
             }
         }
         & .popular__item:nth-child(3n + 2) {
             grid-column: span 2;
             & .popular__image {
-                aspect-ratio: 632 / 344;
+                aspect-ratio: 2 / 1;
             }
         }
 	}
