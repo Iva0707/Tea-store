@@ -1,0 +1,230 @@
+.catalog {
+
+   // .catalog__container
+
+   &__container {
+      display: grid;
+      grid-template-columns: minmax(200px, 302px) 1fr;
+
+      grid-template-rows: repeat(2, auto);
+      column-gap: 241px;
+      row-gap: 68px;
+   }
+
+   // .catalog__title
+
+   &__title {
+      grid-column: span 2 / span 2;
+   }
+
+   // .catalog__sidebar
+
+   &__sidebar {
+      grid-row-start: 2;
+   }
+
+   // .catalog__price
+
+   &__price {
+      &:not(:last-child) {
+         margin-bottom: 64px;
+      }
+   }
+
+   // .catalog__price-title
+
+   &__price-title {
+      &:not(:last-child) {
+         margin-bottom: 43px;
+      }
+   }
+
+   // .catalog__price-slider
+
+   &__price-slider {}
+
+   // .catalog__price-line
+
+   &__price-line {}
+
+   // .catalog__price-point
+
+   &__price-point {}
+
+   // .catalog__price-fixed-value
+
+   &__price-fixed-value {}
+
+   // .catalog__price-loading-indicator
+
+   &__price-loading-indicator {}
+
+   // .catalog__price-loading-spinner
+
+   &__price-loading-spinner {}
+
+   // .catalog__checkbox
+
+   &__checkbox {
+      &:not(:last-child) {
+         margin-bottom: 46px;
+      }
+
+   }
+
+   // .catalog__checkbox-title
+
+   &__checkbox-title {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:last-child) {
+         margin-bottom: 23px;
+      }
+
+      &::after {
+         content: '';
+         width: 24px;
+         height: 24px;
+         display: inline-block;
+         background-image: url('../assets/img/arrow_down-catalog.svg');
+      }
+
+      &.active::after {
+         transform: rotate(180deg);
+      }
+
+
+   }
+
+   // .catalog__checkbox-content
+
+   &__checkbox-content {
+      display: none;
+      position: relative;
+
+      &.active {
+         display: inline-flex;
+         flex-direction: column;
+         row-gap: 19px;
+      }
+   }
+
+   // .catalog__checkbox-item
+
+   &__checkbox-item {
+      position: absolute;
+      width: 0;
+      height: 0;
+      opacity: 0;
+
+      &:checked+.catalog__checkbox-label::before {
+         background: url('../assets/img/check-catalog.svg') center / 90% no-repeat;
+      }
+
+      &:focus+.checkbox__label {
+         outline: 1px solid #fff;
+         border-radius: 5px;
+      }
+   }
+
+   // .catalog__checkbox-label
+
+   &__checkbox-label {
+      cursor: pointer;
+      display: inline-flex;
+      gap: 10px;
+
+      &::before {
+         content: "";
+         flex: 0 0 34px;
+         width: 34px;
+         height: 34px;
+         border: 1px solid rgb(30, 74, 13);
+         border-radius: 10px;
+         background: rgb(255, 255, 255);
+      }
+   }
+
+   // .catalog__checkbox-text
+
+   &__checkbox-text {
+      align-self: center;
+   }
+
+   // .catalog__grid
+
+   &__grid {
+      grid-row-start: 2;
+   }
+
+   .catalog__sorting {
+      display: block;
+      text-align: right;
+      position: relative;
+
+      &:not(:last-child) {
+         margin-bottom: 136px;
+      }
+
+      span {
+         display: inline-block;
+         padding: 10px 25px;
+         border: 1px solid rgb(65, 65, 65);
+         border-radius: 8px;
+         cursor: pointer;
+
+         &::after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            background-image: url('../assets/img/arrow_down-catalog.svg');
+            background-size: cover;
+            margin-left: 10px;
+         }
+      }
+
+      &:hover .catalog__sorting-dropdown {
+         display: inline-block;
+      }
+   }
+
+   .catalog__sorting-dropdown {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      max-width: 100%;
+      z-index: 1;
+      padding: 40px;
+      border: 1px solid rgb(30, 74, 13);
+      border-radius: 8px;
+
+      background: linear-gradient(180.00deg, rgba(208, 237, 196, 0.5), rgba(134, 170, 120, 0.5) 100%);
+
+      a {
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+
+         &:hover {}
+      }
+   }
+
+   // .catalog__card-goods
+
+   &__card-goods {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      column-gap: 133px;
+      row-gap: 70px;
+   }
+}
+
+.min {}
+
+.max {}

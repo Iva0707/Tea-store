@@ -12,7 +12,7 @@ burger.addEventListener('click', () => {
         headerNav.classList.toggle('header__burger-open');
         body.classList.toggle('header__burger-open');
     } else {
-          closeMenu ()
+        closeMenu()
     }
 })
 
@@ -22,22 +22,34 @@ burgerText.addEventListener('click', () => {
 
 headerNav.addEventListener('click', (event) => {
     if (event.target.tagName === 'A' || event.target.tagName === 'BUTTON' || event.target.tagName === 'IMG') {
-        closeMenu ();
+        closeMenu();
     }
 })
 
-function resize () {
+function resize() {
     const screenWidth = window.innerWidth;
     if (screenWidth > 991.98) {
-        closeMenu ();
+        closeMenu();
     }
 }
 window.addEventListener('resize', resize);
 resize();
 
-function closeMenu () {
+function closeMenu() {
     burger.classList.remove('header__burger-open');
     burgerText.classList.remove('header__burger-open');
     headerNav.classList.remove('header__burger-open');
     body.classList.remove('header__burger-open');
 }
+
+//=============== Accordeon Catalog ===============//
+
+const accordionHeader = document.querySelectorAll('.catalog__checkbox-title');
+const accordionContent = document.querySelectorAll('.catalog__checkbox-content');
+
+accordionHeader.forEach((header, index) => {
+    header.addEventListener('click', () => {
+        header.classList.toggle('active');
+        accordionContent[index].classList.toggle('active');
+    })
+})
