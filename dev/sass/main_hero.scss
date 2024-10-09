@@ -79,13 +79,14 @@ section.hero, .hero {
             }
         }
         &__third {
+            overflow: hidden;
             & .slide__img {
                 object-position: left;
             }
             & .slide__container {
                 height: 100%;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
             }
             & .slide__content {
                 display: flex;
@@ -98,6 +99,7 @@ section.hero, .hero {
                 background: $color_gradient-orange;
                 border-radius: 16px;
                 height: auto;
+                margin-top: 11%;
             }
             & .slide__title {
                 color: $color_error;
@@ -112,9 +114,6 @@ section.hero, .hero {
                 color: $color_white;
                 & span {
                     color: $color_yellow;
-                }
-                & p:not(:last-child) {
-                    margin-bottom: 11px;
                 }
             }
             & .slide__btn {

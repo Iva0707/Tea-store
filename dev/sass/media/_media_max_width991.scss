@@ -209,6 +209,25 @@
                 align-self: flex-end;
                 font-size: 0.87rem; //14
             }
+            &__third {
+                & .slide__container {
+                    align-items: center;
+                }
+                & .slide__content {
+                    margin-top: 0;
+                    padding: 15px;
+                    gap: 8px;
+                }
+                & .slide__title {
+                    margin-bottom: 9px;
+                    font-size: 1.7rem;
+                }
+                & .slide__text {
+                    & :not(:last-child) {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
         }
     }
     section.hero .swiper {
@@ -243,6 +262,10 @@
     }
     // ____________about____________ 
     .about {
+        display: none;
+    }
+    // ____________feedback____________ 
+    .feedback {
         display: none;
     }
 }

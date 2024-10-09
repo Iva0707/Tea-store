@@ -109,18 +109,14 @@
                 top: 35px;
             }
         }   
-
         &__link {
             &:not(:last-child) {
                 margin-bottom: 5px;
             }
         }
-        
         &__link-item {
             font-size: 0.75rem; //12
         }
-
-
         &__rights {
             font-size: 0.5rem;
         }
@@ -158,6 +154,16 @@
                 font-size: 0.43rem;
                 padding: 10px 30px;
                 border-radius: 4px;
+            }
+            &__third {
+                & .slide__content {
+                    padding: 10px;
+                    gap: 4px;
+                }
+                & .slide__title {
+                    font-size: 1rem;
+                    margin-bottom: 5px;
+                }
             }
         }
     }
