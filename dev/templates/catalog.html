@@ -4,17 +4,11 @@
       <div class="catalog__sidebar">
          <div class="catalog__price">
             <div class="catalog__price-title body-text">Ціна</div>
-            <div class="catalog__price-slider">
-               <div class="catalog__price-line"></div>
-               <div id="left-point" class="catalog__price-point"></div>
-               <div id="right-point" class="catalog__price-point"></div>
-               <span class="catalog__price-fixed-value min"></span>
-               <span class="catalog__price-fixed-value max"></span>
-               <div class="catalog__price-loading-indicator">
-                  <span class="catalog__price-loading-spinner"></span>
-                  Loading...
-               </div>
+            <div class="catalog__price-slider" id="price-slider">
+               <div id="min-value" class="catalog__price-tooltip-min"></div>
+               <div id="max-value" class="catalog__price-tooltip-max"></div>
             </div>
+
          </div>
          <div class="catalog__checkbox card-text">
             <h4 class="catalog__checkbox-title active">Вид</h4>
@@ -157,7 +151,7 @@
             </div>
          </div>
 
-         <div class="catalog__card-goods">
+         <div class="catalog__card-goods" id="catalog">
             <a href="#" class="card-goods">
                <figure class="card-goods__img">
                   <img src="../assets/img/card_black-tea.jpg" alt="Чорний чай">
@@ -266,6 +260,7 @@
                   <p class="card-goods__price">145 грн</p>
                </div>
             </a>
+            <div id="card-pagination"></div>
          </div>
       </div>
    </div>

@@ -9,6 +9,8 @@
       grid-template-rows: repeat(2, auto);
       column-gap: 241px;
       row-gap: 68px;
+
+      margin: 48px 0;
    }
 
    // .catalog__title
@@ -125,7 +127,7 @@
       }
 
       &:focus+.checkbox__label {
-         outline: 1px solid #fff;
+         outline: 1px solid $color_white;
          border-radius: 5px;
       }
    }
@@ -142,9 +144,9 @@
          flex: 0 0 34px;
          width: 34px;
          height: 34px;
-         border: 1px solid rgb(30, 74, 13);
+         border: 1px solid $color_green-additional;
          border-radius: 10px;
-         background: rgb(255, 255, 255);
+         background: $color_white;
       }
    }
 
@@ -157,22 +159,26 @@
    // .catalog__grid
 
    &__grid {
+      display: flex;
+      flex-direction: column;
       grid-row-start: 2;
    }
 
-   .catalog__sorting {
-      display: block;
-      text-align: right;
+   &__sorting {
       position: relative;
+      display: inline-block;
+      align-self: flex-end;
 
       &:not(:last-child) {
          margin-bottom: 136px;
       }
 
       span {
-         display: inline-block;
+         display: inline-flex;
+         align-items: center;
+
          padding: 10px 25px;
-         border: 1px solid rgb(65, 65, 65);
+         border: 1px solid $color_black;
          border-radius: 8px;
          cursor: pointer;
 
@@ -181,37 +187,45 @@
             width: 24px;
             height: 24px;
             display: inline-block;
-            background-image: url('../assets/img/arrow_down-catalog.svg');
+            background-image: url('../assets/img/candlestick-catalog.svg');
             background-size: cover;
             margin-left: 10px;
          }
       }
 
       &:hover .catalog__sorting-dropdown {
-         display: inline-block;
+         display: inline-flex;
       }
    }
 
-   .catalog__sorting-dropdown {
-      display: block;
+   &__sorting-dropdown {
+      display: none;
+      flex-direction: column;
+      row-gap: 20px;
       position: absolute;
-      right: 0;
+      left: 0;
       top: 100%;
-      max-width: 100%;
       z-index: 1;
       padding: 40px;
-      border: 1px solid rgb(30, 74, 13);
+      border: 1px solid $color_green-additional;
       border-radius: 8px;
 
-      background: linear-gradient(180.00deg, rgba(208, 237, 196, 0.5), rgba(134, 170, 120, 0.5) 100%);
+      background: $color_green-main;
 
       a {
-         padding: 12px 16px;
+         // padding: 12px 16px;
          text-decoration: none;
          display: block;
+         color: $color_green-additional;
 
          &:hover {}
       }
+   }
+
+   // .catalog__sorting-item
+
+   &__sorting-item {
+      white-space: nowrap;
    }
 
    // .catalog__card-goods
@@ -225,6 +239,83 @@
    }
 }
 
-.min {}
+.noUi-target {}
 
-.max {}
+.noUi-ltr {}
+
+.noUi-horizontal {
+   height: 1px !important;
+}
+
+.noUi-txt-dir-ltr {}
+
+.noUi-base {}
+
+.noUi-connects {
+   background: $color_green-additional;
+}
+
+.noUi-connect {
+   background: $color_green-additional !important;
+}
+
+.noUi-origin {}
+
+.noUi-horizontal .noUi-handle {
+   width: 26px !important;
+   height: 26px !important;
+   right: 0 !important;
+   top: -13px !important;
+}
+
+.noUi-handle {
+   border-radius: 50% !important;
+   background: $color_green-secondary !important;
+
+}
+
+.noUi-handle:after,
+.noUi-handle:before {
+   content: none !important;
+}
+
+.noUi-handle-lower {}
+
+.noUi-touch-area {}
+
+.noUi-tooltip {}
+
+.noUi-handle-upper {}
+
+
+.catalog {
+
+   // .catalog__price
+
+   &__price {}
+
+   // .catalog__price-slider
+
+   &__price-slider {
+      position: relative;
+   }
+
+   // .catalog__price-tooltip-min
+
+   &__price-tooltip-min,
+   &__price-tooltip-max {
+      bottom: 11px;
+   }
+
+   &__price-tooltip-min {
+      position: absolute;
+      right: 0;
+   }
+
+   // .catalog__price-tooltip-max
+
+   &__price-tooltip-max {
+      position: absolute;
+      left: 0;
+   }
+}
