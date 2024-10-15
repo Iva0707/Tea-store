@@ -4,6 +4,10 @@
         padding: 0 15px;
     }
 
+    .special-container {
+        min-height: calc(100vh - 230px);
+    }
+
     .home {
         & section {
               margin: 16px 0px;
@@ -22,6 +26,12 @@
             border-radius: 8px;
             padding: 10px 8px;
             min-width: 93px;
+        }
+    }
+
+    .title {
+        &-decor {
+            font-size: 1.68rem;
         }
     }
 
@@ -196,6 +206,44 @@
                     aspect-ratio: 192 / 206;
                     max-height: 205px;
                 }
+            }
+        }
+    }
+
+    // ==================delivery.html==================
+    .delivery {
+        &__row {
+            padding: 45px 0 70px;
+        }
+        &__list-item {
+            &:not(:last-child) {
+                margin-bottom: 3.5em;
+            }
+        }
+        &__list-text {
+            font-size: 1rem;
+            line-height: 1.55em;
+        }
+    }
+
+    // ==================payment.html==================
+    .payment {
+        &__row {
+            padding: 48px 0 70px;
+        }
+        &__content {
+            gap: 24px;
+        }
+        &__content-subtitle {
+            font-size: 1.25rem;
+            &:not(:last-child) {
+                margin-bottom: 0.4em;
+            }
+        }
+        &__content-text {
+            font-size: 0.62rem;
+            & p {
+                line-height: 2.5;
             }
         }
     }

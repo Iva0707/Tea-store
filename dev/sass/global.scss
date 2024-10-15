@@ -30,6 +30,10 @@ input[type=search] {
       margin: 0 auto;
 }
 
+.special-container { // Контейнер для додаткових сторінок з малою кількістю контенту
+      min-height: calc(100vh - 443px);  
+}
+
 .home {
       & section {
             margin: 32px 0px;
@@ -50,6 +54,14 @@ input[type=search] {
             font-size: 20px;
             line-height: 1.25;
             letter-spacing: 0.01em;
+      }
+      &-decor {
+            font-family: $font-playfair;
+            background: $color_gradient-secondary;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.3;
       }
 }
 
