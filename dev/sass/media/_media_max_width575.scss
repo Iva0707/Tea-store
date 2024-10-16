@@ -247,4 +247,29 @@
             }
         }
     }
+
+    // ==================return.html==================
+    .return {
+        &__row {
+            padding: 48px 0 70px;
+            gap: 31px;
+        }
+        &__subtitle {
+            font-size: 1.25rem;
+            &:not(:last-child) {
+                margin-bottom: 1em;
+            }
+        }
+        &__list-item {
+            font-size: 0.62rem;
+            margin-left: 15px;
+            line-height: 1.6rem;
+            &::before {
+                left: -11px;
+                top: 10px;
+                width: 2px;
+                height: 2px;
+            }
+        }
+    }
 }

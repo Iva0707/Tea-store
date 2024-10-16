@@ -294,4 +294,18 @@
             font-size: 1rem;
         }
     }
+
+    // ==================return.html==================
+    .return {
+        &__subtitle {
+            font-size: 1.62rem;
+        }
+        &__list-item {
+            font-size: 1rem;
+            margin-left: 24px;
+            &::before {
+                left: -13px;
+            }
+        }
+    }
 }

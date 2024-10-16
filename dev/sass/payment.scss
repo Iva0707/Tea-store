@@ -2,7 +2,8 @@
     // .payment__container
     &__container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
     // .payment__row
     &__row {
