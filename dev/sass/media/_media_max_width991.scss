@@ -308,4 +308,28 @@
             }
         }
     }
+
+    // ==================politics.html==================
+    .politics {
+        &__main-item {
+            &::before {
+                font-size: 1.62rem;
+            }
+        }
+        &__list-subtitle {
+            font-size: 1.62rem;
+        }
+        &__secondary-list {
+            margin-left: 20px;
+        }
+        &__secondary-item {
+            font-size: 1rem;
+            &::before {
+                left: -10px;
+            }
+            &.politics__secondary-item-notmarked {
+                margin-left: -20px;
+            }
+        }
+    }
 }

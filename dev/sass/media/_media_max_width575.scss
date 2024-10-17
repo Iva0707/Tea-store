@@ -272,4 +272,46 @@
             }
         }
     }
+
+    // ==================politics.html==================
+    .politics {
+        &__title {
+            &:not(:last-child) {
+                margin-bottom: 1.3em;
+            }
+        }
+        &__row {
+            padding: 40px 0 44px;
+        }
+        &__main-list {
+            gap: 23px;
+        }
+        &__main-item {
+            &::before {
+                font-size: 1.25rem;
+            }
+        }
+        &__list-subtitle {
+            font-size: 1.25rem;
+        }
+        &__secondary-list {
+            margin-left: 14px;
+            & li:first-child {
+                margin-top: 0.55em;
+            }
+        }
+        &__secondary-item {
+            font-size: 0.62rem;
+            line-height: 1.6rem;
+            &::before {
+                height: 2px;
+                width: 2px;
+                top: 11px;
+                left: -9px;
+            }
+            &.politics__secondary-item-notmarked {
+                margin-left: -14px;
+            }
+        }
+    }
 }
