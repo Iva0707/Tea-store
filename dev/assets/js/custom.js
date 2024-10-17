@@ -130,27 +130,90 @@ function renderProducts(products) {
     });
 }
 
-// Пагінація
-function setupPagination(products) {
-    const paginationContainer = document.getElementById('card-pagination');
+// // Пагінація
+// function setupPagination(products) {
+//     const paginationContainer = document.getElementById('card-pagination');
 
-    const pagination = new Pagination(paginationContainer, {
-        totalItems: products.length,
-        itemsPerPage: itemsPerPage,
-        visiblePages: 3, // Кількість видимих сторінок
-        onPageChange: (pageNumber) => {
-            currentPage = pageNumber;
-            renderProducts(products);
-        }
-    });
-}
+//     const pagination = new Pagination(paginationContainer, {
+//         totalItems: products.length,
+//         itemsPerPage: itemsPerPage,
+//         visiblePages: 3, // Кількість видимих сторінок
+//         onPageChange: (pageNumber) => {
+//             currentPage = pageNumber;
+//             renderProducts(products);
+//         }
+//     });
+// }
 
-async function main() {
-    const products = await fetchProducts();
-    if (products) {
-        renderProducts(products);
-        setupPagination(products);
+// async function main() {
+//     const products = await fetchProducts();
+//     if (products) {
+//         renderProducts(products);
+//         setupPagination(products);
+//     }
+// }
+
+// main();
+
+$(document).ready(function () {
+    let products = []; // Масив для зберігання товарів
+    const pageSize = 10; // Кількість товарів на сторінці
+
+    // Функція для завантаження товарів з JSON
+    function loadProducts() {
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data; // Зберігаємо завантажені товари
+                setupPagination(products);
+            })
+            .catch(error => console.error('Error loading products:', error));
     }
-}
 
-main();
+    // Функція для налаштування пагінації
+    function setupPagination(products) {
+        $('#paginationContainer').pagination({
+            dataSource: products,
+            pageSize: pageSize,
+            callback: function (data, pagination) {
+                renderProducts(data); // Рендерим товари на поточній сторінці
+            }
+        });
+    }
+
+    // Функція для рендерингу товарів
+    function renderProducts(products) {
+        const productContainer = $('#productContainer');
+        productContainer.empty(); // Очищуємо контейнер перед додаванням нових товарів
+
+        products.forEach(product => {
+            product.weights.forEach(weightInfo => {
+                const productHtml = `
+                    <a href="#" class="card-goods">
+                        <figure class="card-goods__img">
+                            <img src="${product.image}" alt="${product.name}">
+                        </figure>
+                        <div class="card-goods__content">
+                            <h3 class="card-goods__title">${product.name}</h3>
+                            <div class="card-goods__icons icons-card">
+                                <button class="card-goods__icon-like" aria-label="Додати до улюблених">
+                                    <img src="../assets/img/card_like.svg" alt="Значок улюбленого" />
+                                </button>
+                                <button class="card-goods__icon-cart" aria-label="Додати в кошик">
+                                    <img src="../assets/img/card_cart.svg" alt="Значок кошика" />
+                                </button>
+                            </div>
+                            <p class="card-goods__weight">${weightInfo.weight} гр</p>
+                            <p class="card-goods__price">${weightInfo.price} грн</p>
+                        </div>
+                    </a>
+                `;
+                productContainer.append(productHtml); // Додаємо товар до контейнера
+            });
+        });
+    }
+
+    // Викликаємо функцію для завантаження товарів
+    loadProducts();
+});
+
