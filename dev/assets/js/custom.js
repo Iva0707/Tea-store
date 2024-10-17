@@ -76,42 +76,105 @@ slider.noUiSlider.on('update', (values, handle) => {
 
 //=============== Pagination Caralog ===============//
 
-const itemsPerPage = 6; // Кількість товарів
-let currentPage = 1;
+$(document).ready(function () {
+    let products = [];
+    const pageSize = 6; // Кількість товарів на сторінці
 
-// Функція для отримання товарів з API (products.json)
-async function fetchProducts() {
-    try {
-        const response = await fetch('/assets/data/products.json'); // Замінити на URL
-        if (!response.ok) throw new Error('Network response was not ok');
+    //=============== Завантаження товарів з products.json ===============//
 
-        const products = await response.json();
-        return products;
-    } catch (error) {
-        console.error('There has been a problem with your fetch operation:', error);
+    function loadProducts() {
+        fetch('assets/data/products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                setupPagination(products);
+            })
+            .catch(error => console.error('Error loading products:', error));
     }
-}
 
-function renderProducts(products) {
-    const container = document.getElementById('catalog');
-    container.innerHTML = '';
+    function setupPagination(products) {
+        const totalPages = Math.ceil(products.length / pageSize);
 
-    const start = (currentPage - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const paginatedProducts = products.slice(start, end);
+        $('#paginationContainer').pagination({
+            dataSource: Array.from({ length: totalPages }, (v, k) => k + 1), // Генерація масиву сторінок
+            pageSize: 1, // Кількість елементів на сторінці (кнопок пагінації)
+            callback: function (data, pagination) {
+                renderProducts(products.slice((pagination.pageNumber - 1) * pageSize, pagination.pageNumber * pageSize)); // Рендеринг товарів
+            },
+            // Кастомні параметри пагінації
+            className: 'pagination',
+            prevText: '<',
+            nextText: '>',
+            showPrevious: true,
+            showNext: true,
+            onPageButtonRender: function (buttonData, isDisabled) {
+                if (buttonData.type === 'page') {
+                    return `<li class="pagination-button" data-page="${buttonData.pageNumber}">${buttonData.pageNumber}</li>`;
+                } else if (buttonData.type === 'ellipsis') {
+                    return '<li class="pagination-ellipsis">...</li>';
+                }
+                return '';
+            },
+            onPageChange: function (pageNumber) {
+                $('#paginationContainer').pagination('go', pageNumber);
+            },
+            formatPage: function (pageNumber) {
+                return pageNumber.toString();
+            },
+        });
 
-    paginatedProducts.forEach(product => {
-        product.weights.forEach(weight => {
-            const card = document.createElement('a');
-            card.classList.add('card-goods');
-            card.href = `product.html?id=${product.id}&weight=${weight.weight}`;
+        // Кастомна логіка для відображення сторінок
+        $('#paginationContainer').on('page:changed', function (event, page) {
+            const pagesToShow = createPaginationArray(totalPages, page);
+            $('#paginationContainer').pagination('dataSource', pagesToShow);
+        });
+    }
 
-            card.innerHTML = `
+    function createPaginationArray(totalPages, currentPage) {
+        const pages = [];
+
+        if (totalPages <= 1) return pages; // Якщо сторінок менше 1, повертаємо пустий масив
+
+        if (currentPage > 1) pages.push(1); // Додаємо першу сторінку
+
+        if (currentPage > 3) {
+            pages.push('...'); // Додаємо три крапки, якщо відстань між першою і поточною сторінкою більше 2
+        }
+
+        for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+            pages.push(i); // Додаємо сторінки перед і після поточної
+        }
+
+        if (currentPage < totalPages - 2) {
+            pages.push('...'); // Додаємо три крапки, якщо відстань між поточною та останньою сторінкою більше 2
+        }
+
+        if (totalPages > 1) pages.push(totalPages); // Додаємо останню сторінку
+
+        return pages;
+    }
+
+
+    //=============== Додавання товарів до каталогу ===============//
+
+    function renderProducts(products) {
+        const productContainer = $('#productContainer');
+        productContainer.empty();
+
+        products.forEach(product => {
+            let weightOptions = '';
+
+            product.weights.forEach((weightInfo, index) => {
+                weightOptions += `<span data-index="${index}" class="card-goods__dropdown-item">${weightInfo.weight} гр</span>`;
+            });
+
+            const productHtml = `
+            <a href="#" class="card-goods">
                 <figure class="card-goods__img">
                     <img src="${product.image}" alt="${product.name}">
                 </figure>
                 <div class="card-goods__content">
-                    <h3 class="card-goods__title">${product.name}</h3>
+                    <h3 class="card-goods__title card-text">${product.name}</h3>
                     <div class="card-goods__icons icons-card">
                         <button class="card-goods__icon-like" aria-label="Додати до улюблених">
                             <img src="../assets/img/card_like.svg" alt="Значок улюбленого" />
@@ -120,100 +183,58 @@ function renderProducts(products) {
                             <img src="../assets/img/card_cart.svg" alt="Значок кошика" />
                         </button>
                     </div>
-                    <p class="card-goods__weight">${weight.weight} гр</p>
-                    <p class="card-goods__price">${weight.price} грн</p>
+                    <div class="card-goods__dropdown">
+                        <button class="card-goods__dropdown-toggle card-text">Оберіть вагу</button>
+                        <div class="card-goods__dropdown-menu card-text">${weightOptions}</div>
+                    </div>
+                    <p class="card-goods__price card-text">${product.weights[0].price} грн</p>
                 </div>
-            `;
+            </a>
+        `;
 
-            container.appendChild(card);
+            productContainer.append(productHtml);
         });
-    });
-}
 
-// // Пагінація
-// function setupPagination(products) {
-//     const paginationContainer = document.getElementById('card-pagination');
+        //=============== Відкриття та закриття дропдаун меню ===============//
 
-//     const pagination = new Pagination(paginationContainer, {
-//         totalItems: products.length,
-//         itemsPerPage: itemsPerPage,
-//         visiblePages: 3, // Кількість видимих сторінок
-//         onPageChange: (pageNumber) => {
-//             currentPage = pageNumber;
-//             renderProducts(products);
-//         }
-//     });
-// }
+        $('.card-goods__dropdown-toggle').on('click', function (e) {
+            e.preventDefault(); // Запобігаємо стандартній поведінці кнопки
+            e.stopPropagation(); // Зупиняємо подальше поширення події
 
-// async function main() {
-//     const products = await fetchProducts();
-//     if (products) {
-//         renderProducts(products);
-//         setupPagination(products);
-//     }
-// }
+            const $menu = $(this).siblings('.card-goods__dropdown-menu');
 
-// main();
-
-$(document).ready(function () {
-    let products = []; // Масив для зберігання товарів
-    const pageSize = 10; // Кількість товарів на сторінці
-
-    // Функція для завантаження товарів з JSON
-    function loadProducts() {
-        fetch('products.json')
-            .then(response => response.json())
-            .then(data => {
-                products = data; // Зберігаємо завантажені товари
-                setupPagination(products);
-            })
-            .catch(error => console.error('Error loading products:', error));
-    }
-
-    // Функція для налаштування пагінації
-    function setupPagination(products) {
-        $('#paginationContainer').pagination({
-            dataSource: products,
-            pageSize: pageSize,
-            callback: function (data, pagination) {
-                renderProducts(data); // Рендерим товари на поточній сторінці
+            if ($menu.css('display') === 'flex') {
+                $menu.hide();
+            } else {
+                $('.card-goods__dropdown-menu').hide();
+                $menu.css('display', 'flex');
             }
         });
-    }
 
-    // Функція для рендерингу товарів
-    function renderProducts(products) {
-        const productContainer = $('#productContainer');
-        productContainer.empty(); // Очищуємо контейнер перед додаванням нових товарів
+        $(document).on('click', function () {
+            $('.card-goods__dropdown-menu').hide();
+        });
 
-        products.forEach(product => {
-            product.weights.forEach(weightInfo => {
-                const productHtml = `
-                    <a href="#" class="card-goods">
-                        <figure class="card-goods__img">
-                            <img src="${product.image}" alt="${product.name}">
-                        </figure>
-                        <div class="card-goods__content">
-                            <h3 class="card-goods__title">${product.name}</h3>
-                            <div class="card-goods__icons icons-card">
-                                <button class="card-goods__icon-like" aria-label="Додати до улюблених">
-                                    <img src="../assets/img/card_like.svg" alt="Значок улюбленого" />
-                                </button>
-                                <button class="card-goods__icon-cart" aria-label="Додати в кошик">
-                                    <img src="../assets/img/card_cart.svg" alt="Значок кошика" />
-                                </button>
-                            </div>
-                            <p class="card-goods__weight">${weightInfo.weight} гр</p>
-                            <p class="card-goods__price">${weightInfo.price} грн</p>
-                        </div>
-                    </a>
-                `;
-                productContainer.append(productHtml); // Додаємо товар до контейнера
-            });
+        //=============== Грам до ціни ===============//
+
+        $('.card-goods__dropdown-item').on('click', function () {
+            const selectedWeightIndex = $(this).data('index');
+            const productIndex = $(this).closest('.card-goods').index();
+
+            const selectedProduct = products[productIndex];
+            const selectedWeight = selectedProduct.weights[selectedWeightIndex];
+
+            $(this).closest('.card-goods__dropdown').find('.card-goods__dropdown-toggle').text(`${selectedWeight.weight} гр`);
+            $(this).closest('.card-goods').find('.card-goods__price').text(`${selectedWeight.price} грн`);
+
+            $(this).closest('.card-goods__dropdown-menu').hide();
         });
     }
 
-    // Викликаємо функцію для завантаження товарів
     loadProducts();
 });
+
+
+
+
 

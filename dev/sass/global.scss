@@ -628,9 +628,6 @@ input[type=search] {
 
       &__title {
             justify-self: flex-start;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 24px;
       }
 
       // .card-goods__icons
@@ -652,18 +649,13 @@ input[type=search] {
 
       &__weigth {
             justify-self: flex-start;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 24px;
       }
 
       // .card-goods__price
 
       &__price {
             justify-self: flex-end;
-            font-size: 20px;
             font-weight: 600;
-            line-height: 24px;
       }
 
       // card-goods__icon-like
@@ -673,4 +665,10 @@ input[type=search] {
       // card-goods__icon-cart
 
       &__icon-cart {}
+
+      &__icon-like,
+      &__icon-cart {
+            width: 24px;
+            height: 24px;
+      }
 }

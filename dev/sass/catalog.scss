@@ -319,3 +319,75 @@
       left: 0;
    }
 }
+
+//=============== Dropdown menu for catalog goods ===============//
+
+.card-goods {
+   &__dropdown {
+      position: relative;
+      display: inline-block;
+   }
+
+   &__dropdown-toggle {
+      background-color: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 5px 5px;
+      cursor: pointer;
+   }
+
+   &__dropdown-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      z-index: 1;
+      width: 100%;
+      overflow-y: auto;
+   }
+
+   &__dropdown-item {
+      padding: 5px;
+      cursor: pointer;
+   }
+
+   &__dropdown-item:hover {
+      background-color: #eee;
+   }
+}
+
+//=============== Pagination for catalog ===============//
+
+#paginationContainer {
+   grid-column: span 2 / span 2;
+   width: 100%;
+}
+
+.paginationjs {}
+
+.paginationjs-pages {
+   ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+
+      .active {
+         font-weight: 700;
+      }
+   }
+}
+
+.paginationjs-prev {}
+
+.disabled {}
+
+.paginationjs-page {}
+
+.J-paginationjs-page {}
+
+.active {}
+
+.paginationjs-next {}
+
+.J-paginationjs-next {}
