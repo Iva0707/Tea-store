@@ -314,4 +314,27 @@
             }
         }
     }
+
+    // ==================about.html==================
+    .about-us {
+        &__container {
+            margin: 40px auto;
+        }
+        &__row {
+            gap: 32px;
+        }
+        &__title {
+            font-size: 1.25rem; // 20
+            margin-bottom: 1.6em;
+        }
+        &__item:nth-child(n) {
+            gap: 16px;
+        }
+        &__text {
+            font-size: 1rem; // 16
+            & p {
+                line-height: 1.56;
+            }
+        }
+    }
 }

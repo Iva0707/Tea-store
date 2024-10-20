@@ -332,4 +332,22 @@
             }
         }
     }
+
+    // ==================about.html==================
+    .about-us {
+        &__container {
+            margin: 40px auto 50px;
+        }
+        &__row {
+            gap: 50px;
+        }
+        &__title {
+            font-size: 1.87rem; //30
+            margin-bottom: 1em;
+        }
+        &__text {
+            font-size: 1.37rem; // 22
+        }
+    }
+
 }

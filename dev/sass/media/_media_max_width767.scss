@@ -28,4 +28,17 @@
             aspect-ratio: 190 / 120;
 		}
     }
+
+    // ==================about.html==================
+    .about-us {
+        &__item {
+            &:nth-child(n) {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+        }
+        &__image-box {
+            aspect-ratio: 398 / 268;
+        }
+    }
 }
