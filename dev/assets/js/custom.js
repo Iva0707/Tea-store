@@ -54,25 +54,7 @@ accordionHeader.forEach((header, index) => {
     })
 })
 
-//=============== Slider Price ===============//
 
-const slider = document.getElementById('price-slider');
-const maxValue = document.getElementById('max-value');
-const minValue = document.getElementById('min-value');
-
-noUiSlider.create(slider, {
-    start: [50, 357],
-    connect: true,
-    range: {
-        'min': 0,
-        'max': 500,
-    }
-});
-
-slider.noUiSlider.on('update', (values, handle) => {
-    minValue.innerHTML = parseInt(values[1]);
-    maxValue.innerHTML = parseInt(values[0]);
-})
 
 //=============== Pagination Caralog ===============//
 
@@ -133,29 +115,29 @@ $(document).ready(function () {
     function createPaginationArray(totalPages, currentPage) {
         const pages = [];
 
-        if (totalPages <= 1) return pages; // Якщо сторінок менше 1, повертаємо пустий масив
+        if (totalPages <= 1) return pages;
 
-        if (currentPage > 1) pages.push(1); // Додаємо першу сторінку
+        if (currentPage > 1) pages.push(1);
 
         if (currentPage > 3) {
-            pages.push('...'); // Додаємо три крапки, якщо відстань між першою і поточною сторінкою більше 2
+            pages.push('...');
         }
 
         for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
-            pages.push(i); // Додаємо сторінки перед і після поточної
+            pages.push(i);
         }
 
         if (currentPage < totalPages - 2) {
-            pages.push('...'); // Додаємо три крапки, якщо відстань між поточною та останньою сторінкою більше 2
+            pages.push('...');
         }
 
-        if (totalPages > 1) pages.push(totalPages); // Додаємо останню сторінку
+        if (totalPages > 1) pages.push(totalPages);
 
         return pages;
     }
 
 
-    //=============== Додавання товарів до каталогу ===============//
+    //=============== Додавання карток товарів до каталогу ===============//
 
     function renderProducts(products) {
         const productContainer = $('#productContainer');
@@ -167,6 +149,10 @@ $(document).ready(function () {
             product.weights.forEach((weightInfo, index) => {
                 weightOptions += `<span data-index="${index}" class="card-goods__dropdown-item">${weightInfo.weight} гр</span>`;
             });
+
+            // Встановлюємо мінімальну вагу, беручи перший елемент з масиву weights
+            const initialWeight = product.weights[0].weight;
+            const initialPrice = product.weights[0].price;
 
             const productHtml = `
             <a href="#" class="card-goods">
@@ -184,10 +170,11 @@ $(document).ready(function () {
                         </button>
                     </div>
                     <div class="card-goods__dropdown">
-                        <button class="card-goods__dropdown-toggle card-text">Оберіть вагу</button>
+                        <!-- Встановлюємо мінімальну вагу замість "Оберіть вагу" -->
+                        <button class="card-goods__dropdown-toggle card-text">${initialWeight} гр</button>
                         <div class="card-goods__dropdown-menu card-text">${weightOptions}</div>
                     </div>
-                    <p class="card-goods__price card-text">${product.weights[0].price} грн</p>
+                    <p class="card-goods__price card-text">${initialPrice} грн</p>
                 </div>
             </a>
         `;
@@ -198,8 +185,8 @@ $(document).ready(function () {
         //=============== Відкриття та закриття дропдаун меню ===============//
 
         $('.card-goods__dropdown-toggle').on('click', function (e) {
-            e.preventDefault(); // Запобігаємо стандартній поведінці кнопки
-            e.stopPropagation(); // Зупиняємо подальше поширення події
+            e.preventDefault();
+            e.stopPropagation();
 
             const $menu = $(this).siblings('.card-goods__dropdown-menu');
 
@@ -234,7 +221,56 @@ $(document).ready(function () {
     loadProducts();
 });
 
+//=============== Finding lowest and highiest price ===============//
 
 
+let minPrice;
+let maxPrice;
 
+function findMinMaxPrices(products) {
+    minPrice = Infinity;
+    maxPrice = -Infinity;
+
+    products.forEach(product => {
+        product.weights.forEach(weightInfo => {
+            const price = weightInfo.price;
+
+            if (price < minPrice) {
+                minPrice = price;
+            }
+            if (price > maxPrice) {
+                maxPrice = price;
+            }
+        });
+    });
+}
+
+$.getJSON('assets/data/products.json', function (data) {
+    findMinMaxPrices(data);
+});
+
+
+//=============== Slider Price ===============//
+
+const slider = document.getElementById('price-slider');
+const maxValue = document.getElementById('max-value');
+const minValue = document.getElementById('min-value');
+
+$.getJSON('assets/data/products.json', function (data) {
+    findMinMaxPrices(data);
+
+    noUiSlider.create(slider, {
+        start: [minPrice, maxPrice],
+        connect: true,
+        range: {
+            'min': minPrice,
+            'max': maxPrice,
+        }
+    });
+
+    slider.noUiSlider.on('update', (values, handle) => {
+        minValue.innerHTML = parseInt(values[1]);
+        maxValue.innerHTML = parseInt(values[0]);
+    });
+});
 
