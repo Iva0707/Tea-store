@@ -88,6 +88,7 @@
     &__comment{
         display: flex;
         gap: 26px;
+        align-items: center;
     }
     &__addcomment{
         width: 34px;
@@ -102,15 +103,44 @@
         line-height: 24px;
         font-size: 16px;
     }
-    &__call{
+    &__call {
+        position: relative; // Для позиціювання галочки всередині чекбоксу
         border: 1px solid $color_green-additional;
         height: 34px;
         width: 34px;
         border-radius: 10px;
-        &:hover{
+        background-color: transparent; // Прозорий фон за замовчуванням
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        appearance: none; // Видаляємо стандартний вигляд чекбоксу
+
+        // Створюємо псевдоелемент для галочки
+        &::before {
+            content: '';
+            width: 10px;
+            height: 16px;
+            border: solid $color_green-additional;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%) rotate(45deg); // Позиціонуємо галочку точно по центру
+            opacity: 0; // Початково прихована
+            transition: opacity 0.2s ease;
+        }
+
+        // Показуємо галочку при натисканні
+        &:checked::before {
+            opacity: 1; // Робимо видимою галочку
+        }
+
+        &:hover {
             cursor: pointer;
         }
-    }
+    }   
 }
 
 .products{
@@ -119,7 +149,7 @@
     gap: 46px;
     max-width: 412px;
     &__summary{
-        grid-column: 2/3;
+        grid-column: 2/4;
         grid-row: 2/3;
         display: flex;
         flex-direction: column;
@@ -135,63 +165,69 @@
     font-size: 16px;
     color: $color_green-secondary;
     cursor: default;
-  
+
     &__container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: 2px solid #a2d5a1;
-      padding: 16px 16px 16px 40px;
-      border-radius: 8px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid #a2d5a1;
+        padding: 16px 16px 16px 40px;
+        border-radius: 8px;
     }
-  
+
     &__custom {
-      position: relative;
-      width: 520px;
+        position: relative;
+        width: 520px;
     }
-  }
-  
-  .select__arrow {
+}
+
+.arrow {
     background: none;
     border: none;
-    font-size: 16px;
-    color: #a2d5a1;
-    cursor: pointer; // Курсор pointer для кнопки
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     transition: transform 0.3s ease-in-out;
-  
-    &::before {
-      content: '▼'; // Стрілка вниз
-      transition: transform 0.3s ease-in-out;
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease-in-out;
     }
-  
-    &.rotated::before { // Змінюємо на &.rotated для правильного селектора
-      content: '▲'; // Стрілка вгору
-      transform: rotate(180deg); // Повертаємо на 180 градусів
+
+    // Коли стрілка активна (показує, що список відкрито)
+    &__rotated &__icon {
+        transform: rotate(180deg);  // Обертання стрілки вгору
     }
-  }
-  
-  .option {
+}
+
+
+
+
+
+.option {
     padding: 10px;
     cursor: pointer;
     color: $color_green-additional;
-  
+
     &__hidden {
-      display: none; // Список прихований за замовчуванням
+        display: none;
     }
-  
+
     &__list {
-      position: absolute;
-      top: 100%; // Зміщуємо список під контейнером
-      left: 0;
-      width: 100%;
-      background-color: white;
-      border: none;
-      z-index: 10;
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border: none;
+        z-index: 10;
     }
-  
+
     &:hover {
-      background-color: $color_grey;
+        background-color: $color_grey;
     }
-  }
-  
+}
