@@ -14,19 +14,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import "sass/reset";
 @import "sass/variables";
-@import "sass/fonts";
 @import "sass/global";
+@import "sass/fonts";
+
 @import "sass/header";
+@import "sass/footer";
+
 @import "sass/main_hero";
 @import "sass/main_advantages";
-@import "sass/main_goods";
 @import "sass/main_popular";
+@import "sass/main_goods";
 @import "sass/main_about";
+
+@import "sass/pay.scss";
+
+@import "sass/payment.scss";
 @import "sass/feedback";
 @import "sass/about";
 @import "sass/delivery";
 @import "sass/payment";
 @import "sass/return";
 @import "sass/politics";
-@import "sass/footer";
+
+@import "sass/order.scss";
+@import "sass/order.scss";
+
 @import "sass/media/media";
