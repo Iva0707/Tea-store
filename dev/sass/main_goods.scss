@@ -1,19 +1,22 @@
 .goods {
-    padding-top: 32px;
-    background-color: $color_green_main;
+	padding-top: 32px;
+	background-color: $color_green_main;
+
 	// .goods__row
 	&__row {
-        padding: 32px 0;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 1fr));
-        gap: 22px;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+		gap: 22px;
+		padding: 32px 0;
 	}
+
 	// .goods__name
-    &__name {
-        min-width: 145px;
-    }
+	&__name {
+		min-width: 145px;
+	}
+
 	// .goods__image
 	&__image {
-        aspect-ratio: 1 / 1;
+		aspect-ratio: 1 / 1;
 	}
 }
