@@ -1,15 +1,17 @@
 @media screen and (max-width: 400.98px) {
-    .footer {
-        &__input-label {
-            font-size: 0.75rem;
-            margin-bottom: 5px;
-            margin-right: -25px;
-        }
-        &__input {
-            gap: 5px;
-        }
-        &__button {
-            padding: 11.5px 3px;
-        }
-    }
+	.footer {
+		&__input-label {
+			margin-bottom: 5px;
+			margin-right: -25px;
+			font-size: 0.75rem;
+		}
+
+		&__input {
+			gap: 5px;
+		}
+
+		&__button {
+			padding: 11.5px 3px;
+		}
+	}
 }
