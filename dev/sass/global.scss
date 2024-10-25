@@ -159,16 +159,21 @@ input[type=search] {
 .input-order {
       border: 2px solid $color_green-secondary;
       border-radius: 8px;
-      padding: 16px 301px 16px 40px;
+      padding: 16px 40px 16px 40px;
       background-color: $color_white;
       line-height: 1.56;
       letter-spacing: 0.01em;
       color: $color_green-secondary;
       transition: .3s;
       max-width: 519px;
-      max-height: 92px;
+      max-height: 58px;
       font-weight: 400;
-
+      &__error{
+            display: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+      }
       &__box {
             max-width: 520px;
             display: flex;
@@ -179,7 +184,9 @@ input[type=search] {
       &::placeholder {
             color: $color_green-secondary;
       }
-
+      &:invalid + &__error{
+            display: block;
+      }
       &__title {
             color: $color_khaki;
             line-height: 1.56;
@@ -187,8 +194,11 @@ input[type=search] {
             font-family: $font-main-montserat, sans-serif;
             font-size: 20px;
             font-weight: 400;
+            line-height: 25px;
       }
-
+      &::after{
+            border: 2px solid $color_error;
+      }
       &:hover,
       &:focus {
             border: 2px solid $color_green-additional;
@@ -264,13 +274,6 @@ input[type=search] {
 }
 
 .radio {
-      &__box {
-            max-width: 565px;
-            max-height: 37px;
-            display: flex;
-            gap: 22px;
-      }
-
       appearance: none;
       display: inline-block;
       position: relative;
@@ -278,7 +281,12 @@ input[type=search] {
       width: 34px;
       height: 34px;
       border-radius: 50%;
-
+      &__box {
+            max-width: 565px;
+            max-height: 37px;
+            display: flex;
+            gap: 22px;
+      }
       &:checked {
             background-color: $color_green-main;
       }
@@ -374,6 +382,7 @@ input[type=search] {
       }
 
       &__add {
+            background-color: transparent;
             border: none;
             line-height: 24px;
             font-size: 16px;
@@ -391,19 +400,24 @@ input[type=search] {
       &__delete {
             width: 100%;
             position: relative;
+            background-color: transparent;
       }
 
-      &__btn {
+      &__btn{
+            background-color: transparent;
             border: none;
             width: 24px;
             height: 24px;
-      }
-
-      &__trash {
             position: absolute;
             right: 18px;
             top: 50%;
             transform: translateY(-50%);
+      }
+
+      &__trash{
+            height: 24px;
+            width: 24px;
+            display: block;
       }
 }
 

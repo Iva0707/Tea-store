@@ -1,0 +1,233 @@
+.order{
+    display: flex;
+    flex-direction: column;
+    gap: 54px;
+    height: 100%;
+    &__deldetails{
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    &__products{
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    &__container{
+        padding-bottom: 156px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 50px;
+        row-gap: 64px;
+        column-gap: 240px;
+    }
+    &__delivery{
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    &__summ{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__text{
+        color: $color_black;
+        line-height: 24px;
+        font-family: $font-main-montserat,sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &__price{
+        font-weight: 500;
+    }
+    &__result{
+        color: $color_green-additional;
+    }
+    &__formadd{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__form{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__title{
+        grid-row: 1/2;
+        grid-column: 1/3;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 500;
+    }
+    &__deliverytitle{
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 500;
+        margin-top: 42px;
+        margin-bottom: 40px;
+    }
+    &__or{
+        display: flex;
+        justify-content: center;
+        max-width: 520px;
+        line-height: 25px;
+        font-size: 20px;
+        font-weight: 400;
+        color: $color_green-additional;
+    }
+    &__additional{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    &__comment{
+        display: flex;
+        gap: 26px;
+        align-items: center;
+    }
+    &__addcomment{
+        width: 34px;
+        height: 34px;
+        align-items: center;
+        border: none;
+        background-color: inherit;
+    }
+    &__comenttext{
+        color: $color_green-additional;
+        font-weight: 500;
+        line-height: 24px;
+        font-size: 16px;
+    }
+    &__call {
+        position: relative; // Для позиціювання галочки всередині чекбоксу
+        border: 1px solid $color_green-additional;
+        height: 34px;
+        width: 34px;
+        border-radius: 10px;
+        background-color: transparent; // Прозорий фон за замовчуванням
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        appearance: none; // Видаляємо стандартний вигляд чекбоксу
+
+        // Створюємо псевдоелемент для галочки
+        &::before {
+            content: '';
+            width: 10px;
+            height: 16px;
+            border: solid $color_green-additional;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -70%) rotate(45deg); // Позиціонуємо галочку точно по центру
+            opacity: 0; // Початково прихована
+            transition: opacity 0.2s ease;
+        }
+
+        // Показуємо галочку при натисканні
+        &:checked::before {
+            opacity: 1; // Робимо видимою галочку
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }   
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    max-width: 412px;
+    &__summary{
+        grid-column: 2/4;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        width: 522px;
+        margin-top: 40px;
+        margin-left: auto;
+    }
+}
+
+.select {
+    flex-grow: 1;
+    font-size: 16px;
+    color: $color_green-secondary;
+    cursor: default;
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid #a2d5a1;
+        padding: 16px 16px 16px 40px;
+        border-radius: 8px;
+    }
+
+    &__custom {
+        position: relative;
+        width: 520px;
+    }
+}
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    transition: transform 0.3s ease-in-out;
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    // Коли стрілка активна (показує, що список відкрито)
+    &__rotated &__icon {
+        transform: rotate(180deg);  // Обертання стрілки вгору
+    }
+}
+
+
+
+
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+    color: $color_green-additional;
+
+    &__hidden {
+        display: none;
+    }
+
+    &__list {
+        position: absolute;
+        top: 90%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border: none;
+        z-index: 10;
+    }
+
+    &:hover {
+        background-color: $color_grey;
+    }
+}
