@@ -150,7 +150,6 @@ $(document).ready(function () {
                 weightOptions += `<span data-index="${index}" class="card-goods__dropdown-item">${weightInfo.weight} гр</span>`;
             });
 
-            // Встановлюємо мінімальну вагу, беручи перший елемент з масиву weights
             const initialWeight = product.weights[0].weight;
             const initialPrice = product.weights[0].price;
 
@@ -221,8 +220,7 @@ $(document).ready(function () {
     loadProducts();
 });
 
-//=============== Finding lowest and highiest price ===============//
-
+//=============== Finding lowest and highest price ===============//
 
 let minPrice;
 let maxPrice;
