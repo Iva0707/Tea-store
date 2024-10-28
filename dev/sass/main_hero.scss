@@ -1,0 +1,152 @@
+section.hero, .hero {
+    margin: 0;
+    // .hero__swiper
+    // .swiper
+    &__swiper {
+        width: 100%;
+        height: calc(100vh - 79px);
+        max-height: 1600px;
+    }
+    // .swiper-slide
+    & .slide {
+        position: relative;
+        // .slide__img-box
+        &__img-box {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: $color_white;
+        }
+        // .slide__img
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-position: center;
+        }
+        &__container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            transform: translate(-50%, -50%); 
+        }
+        // .slide__content
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            max-width: 525px;
+            margin-left: auto;
+            padding: 40px 0;
+        }
+        // .slide__title
+        &__title {
+            font-family: $font-playfair;
+            font-weight: 500;
+            font-size: 6rem; 
+            background: $color_gradient-additional;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.35em;
+            &-second {
+                font-weight: 500;
+                font-family: $font-playfair;
+                margin-bottom: 0.35em;
+                font-size: 3rem;
+                color: $color_orange;
+                line-height: 1.28;
+                & span {
+                    color: $color_error;
+                }
+            }
+        }
+        // .slide__subtitle
+        &__subtitle {
+            line-height: 1.2;
+        }
+        // .slide__text
+        &__text {
+            text-align: justify;
+            margin-bottom: 1rem;
+            p:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+        &__third {
+            overflow: hidden;
+            & .slide__img {
+                object-position: left;
+            }
+            & .slide__container {
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+            }
+            & .slide__content {
+                display: flex;
+                flex-direction: column;
+                max-width: 564px;
+                gap: 16px;
+                margin-right: auto;
+                margin-left: 0;
+                padding: 38px 32px;
+                background: $color_gradient-orange;
+                border-radius: 16px;
+                height: auto;
+                margin-top: 11%;
+            }
+            & .slide__title {
+                color: $color_error;
+                background: transparent;
+                background-clip: unset;
+                -webkit-background-clip: unset;
+                -webkit-text-fill-color: unset;
+                font-size: 2.5rem;
+                margin-bottom: 0.55em;
+            }
+            & .slide__text {
+                color: $color_white;
+                & span {
+                    color: $color_yellow;
+                }
+            }
+            & .slide__btn {
+                background-color: $color_yellow;
+            }
+            & .slide__image-additoional {
+                position: absolute;
+                top: 0;
+                right: -6.5%;
+                transform: rotate(15deg);
+                width: 27%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.home .swiper {
+    //.swiper-pagination
+    &-pagination {
+        bottom: 16px;
+        &-bullet {
+            width: 24px;
+            height: 24px;
+            background-color: $color_green-main;
+            opacity: 1;
+            &:hover {
+                box-shadow: $shadow_button;
+                transition: .2s;
+            }
+            &-active {
+                background-color: $color_green-additional;   
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.payment{
+    &__summary{
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        max-width: 522px;
+    }
+    &__cont{
+        max-height: 543px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 193px;
+        max-width: 1280px;
+        margin: 86px auto 158px;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 48px;
+    }
+    &__order{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        min-width: 565px;
+    }
+    &-container{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    &__placing{
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+}
+
+.products{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.btn{
+    &-big{
+        max-width: 520px;
+    }
+}

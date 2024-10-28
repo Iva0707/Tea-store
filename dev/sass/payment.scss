@@ -1,0 +1,38 @@
+.payment {
+    // .payment__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    // .payment__row
+    &__row {
+        width: 100%;
+        padding: 70px 0 100px;
+    }
+    // .payment__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 1.62em;
+        }
+    }
+    // .payment__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    // .payment__content-subtitle
+    &__content-subtitle {
+        color: $color-khaki;
+        &:not(:last-child) {
+            margin-bottom: 0.8em;
+        }
+    }
+    // .payment__content-text
+    &__content-text {
+        & p:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+}
