@@ -12,9 +12,6 @@ Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, feat
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import "sass/register.scss";
-@import "sass/pay.scss";
-@import "sass/payment.scss";
 @import "sass/reset";
 @import "sass/variables";
 @import "sass/fonts";
@@ -35,3 +32,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "sass/media/media";
 @import "sass/order.scss";
 @import "sass/order.scss";
+@import "sass/register.scss";
+@import "sass/pay.scss";
+@import "sass/payment.scss";

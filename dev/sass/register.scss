@@ -1,0 +1,47 @@
+.register{
+    max-width: 500px;
+    max-height: 682px;
+    margin: 70px auto 82px auto;
+    &__block{
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__btn{
+        min-width: 500px;
+    }
+    &__btnm{
+        margin-top: 12px;
+    }
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.or{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    color: $color_green-additional;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    margin-top: 4px;
+}
+
+.input-order--error {
+    border: 1px solid red;
+}

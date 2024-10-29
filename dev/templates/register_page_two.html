@@ -1,0 +1,30 @@
+<section class="register">
+    <div class="register__block">
+        <h1 class="title">Реєстрація</h1>
+        <div class="register__content">
+            <form action="path/to/your/database/endpoint" method="POST" class="register__inputs" id="secondRegistrationForm" onsubmit="return validateSecondPage()">
+                <div class="input-order__box">
+                    <label class="input-order__title" for="email_input">Електронна пошта</label>
+                    <input type="text" class="input-order" id="email_input" placeholder="tea_store@gmail.com">
+                    <span class="error-message" id="email_error">Введено некоректний формат електронної пошти</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="name_input">Ім'я</label>
+                    <input type="text" class="input-order" id="name_input" placeholder="Ірина">
+                    <span class="error-message" id="name_error">Будь ласка, введіть своє ім'я</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="surname_input">Прізвище</label>
+                    <input type="text" class="input-order" id="surname_input" placeholder="Філіменко">
+                    <span class="error-message" id="surname_error">Будь ласка, введіть своє прізвище</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="age_input">Вік</label>
+                    <input type="text" class="input-order" id="age_input" placeholder="34">
+                    <span class="error-message" id="age_error">Будь ласка, введіть свій вік</span>
+                </div>
+                <button type="submit" class="btn register__btn register__btnm">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+</section>

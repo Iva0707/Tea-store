@@ -1,28 +1,27 @@
 <section class="register">
     <div class="register__block">
-        <h1 class="register__title">Реєстрація</h1>
-        <form action="" class="register__inputs">
-            <div class="inputs__item">
+        <h1 class="title">Реєстрація</h1>
+        <div class="register__content">
+            <form action="reg_page_two.html" class="register__inputs" id="firstRegistrationForm" onsubmit="return validateFirstPage()">
                 <div class="input-order__box">
-                    <lable class="input-order__title" for="input-order">Номер телефону</lable>
-                    <input type="text" class="input-order" id="name-input" placeholder="380 68 119 45 56">
+                    <label class="input-order__title" for="phone_input">Номер телефону</label>
+                    <input type="text" class="input-order" id="phone_input" placeholder="380 68 119 45 56">
+                    <span class="error-message" id="phone_error">Введіть коректний номер телефону</span>
                 </div>
-            </div>
-            <div class="inputs__item">
                 <div class="input-order__box">
-                    <lable class="input-order__title" for="input-order">Введіть пароль</lable>
-                    <input type="text" class="input-order" id="name-input" placeholder="*******">
+                    <label class="input-order__title" for="password_input">Введіть пароль</label>
+                    <input type="password" class="input-order" id="password_input" placeholder="*******">
+                    <span class="error-message" id="password_error">Пароль не може бути порожнім</span>
                 </div>
-            </div>
-            <div class="inputs__item">
                 <div class="input-order__box">
-                    <lable class="input-order__title" for="input-order">Повторіть пароль</lable>
-                    <input type="text" class="input-order" id="name-input" placeholder="Повторіть пароль">
+                    <label class="input-order__title" for="repeat_password_input">Повторіть пароль</label>
+                    <input type="password" class="input-order" id="repeat_password_input" placeholder="*******">
+                    <span class="error-message" id="repeat_password_error">Паролі не співпадають</span>
                 </div>
-            </div>
-            <button type="submit" class="">Продовжити</button>
-        </form>
-        <span class="or">або</span>
-        <button class="login"></button>
+                <button type="submit" class="btn register__btn register__btnm">Продовжити</button>
+            </form>
+            <span class="or">або</span>
+            <button class="login register__btn btn btn-outline">Увійти в профіль</button>
+        </div>
     </div>
 </section>
