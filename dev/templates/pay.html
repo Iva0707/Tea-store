@@ -1,0 +1,94 @@
+<section class="payment__cont">
+    <div class="payment__summary">
+        <div class="products">
+            <div class="card-order">
+                <div class="card-order__img">
+                    <a href="#" class="card-order__link"><img src="../assets/img/card_black-tea.jpg" alt=""
+                            class="card-order__img"></a>
+                </div>
+                <div class="card-order__characteristic">
+                    <div class="card-order__top">
+                        <h2 class="card-order__title"><a class="card-order__link" href="#">Продукт</a></h2>
+                        <div class="card-order__price">200 грн</div>
+                    </div>
+                    <div class="card-order__bot">
+                        <div class="card-order__box">
+                            <button class="card-order__add">-</button>
+                            <span class="card-order__quantity" id="card-order__quantity-1">1</span>
+                            <button class="card-order__add">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-order__delete">
+                    <button type="button" class="card-order__btn">
+                        <img src="../assets/img/trash.svg" alt="" class="card-order__trash">
+                    </button>
+                </div>
+            </div>
+            <div class="card-order">
+                <div class="card-order__img">
+                    <a href="#" class="card-order__link"><img src="../assets/img/card_black-tea.jpg" alt=""
+                            class="card-order__img"></a>
+                </div>
+                <div class="card-order__characteristic">
+                    <div class="card-order__top">
+                        <h2 class="card-order__title"><a class="card-order__link" href="#">Продукт</a></h2>
+                        <div class="card-order__price">170 грн</div>
+                    </div>
+                    <div class="card-order__bot">
+                        <div class="card-order__box">
+                            <button class="card-order__add">-</button>
+                            <span class="card-order__quantity" id="card-order__quantity-1">1</span>
+                            <button class="card-order__add">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-order__delete">
+                    <button type="button" class="card-order__btn">
+                        <img src="../assets/img/trash.svg" alt="" class="card-order__trash">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="order">
+            <div class="order__products">
+                <div class="order__summ">
+                    <div class="order__text">Сума замовлення:</div>
+                    <div class="order__text order__price" id="products__summ">365 грн</div>
+                </div>
+                <div class="order__summ">
+                    <div class="order__text">Доставка:</div>
+                    <div class="order__text order__price" id="delivery">70 грн</div>
+                </div>
+            </div>
+            <div class="order__summ">
+                <div class="order__text order__result">Загальна сума:</div>
+                <div class="order__text order__price order__result" id="order__summ">435 грн</div>
+            </div>
+        </div>
+    </div>
+    <div class="payment__order">
+        <div class="payment__placing">
+            <h1 class="payment__title">Оплата</h1>
+            <div class="payment-container">
+                <div class="radio__box">
+                    <input type="radio" class="radio" id="radio_1" name="payment-method" checked>
+                    <label class="radio__text" for="radio_1">Оплата у відділенні нової пошти</label>
+                </div>
+                <div class="radio__box">
+                    <input type="radio" class="radio" id="radio_2" name="payment-method">
+                    <label class="radio__text" for="radio_2">Оплата картою на сайті</label>
+                </div>
+                <div class="radio__box">
+                    <input type="radio" class="radio" id="radio_3" name="payment-method">
+                    <label class="radio__text" for="radio_3">Apple pay</label>
+                </div>
+                <div class="radio__box">
+                    <input type="radio" class="radio" id="radio_4" name="payment-method">
+                    <label class="radio__text" for="radio_4">Google pay</label>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn btn-big" id="order-btn">Оформити замовлення</a>
+    </div>
+</section>
