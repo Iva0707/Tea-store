@@ -5,17 +5,17 @@
             <form action="reg_page_two.html" class="register__inputs" id="firstRegistrationForm" onsubmit="return validateFirstPage()">
                 <div class="input-order__box">
                     <label class="input-order__title" for="phone_input">Номер телефону</label>
-                    <input type="text" class="input-order" id="phone_input" placeholder="380 68 119 45 56">
+                    <input type="text" class="input-order" id="phone_input" name="phone" placeholder="380 68 119 45 56" required>
                     <span class="error-message" id="phone_error">Введіть коректний номер телефону</span>
                 </div>
                 <div class="input-order__box">
                     <label class="input-order__title" for="password_input">Введіть пароль</label>
-                    <input type="password" class="input-order" id="password_input" placeholder="*******">
+                    <input type="password" name="password" class="input-order" id="password_input" placeholder="*******" required>
                     <span class="error-message" id="password_error">Пароль не може бути порожнім</span>
                 </div>
                 <div class="input-order__box">
                     <label class="input-order__title" for="repeat_password_input">Повторіть пароль</label>
-                    <input type="password" class="input-order" id="repeat_password_input" placeholder="*******">
+                    <input type="password" class="input-order" id="repeat_password_input" placeholder="*******" >
                     <span class="error-message" id="repeat_password_error">Паролі не співпадають</span>
                 </div>
                 <button type="submit" class="btn register__btn register__btnm">Продовжити</button>

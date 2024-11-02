@@ -52,3 +52,34 @@ function validateSecondPage() {
 
     return isValid;
 }
+
+document.getElementById('secondRegistrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Зупиняє стандартну відправку форми
+
+    if (validateSecondPage()) {
+        // Імітація успішної реєстрації без запиту на сервер
+        alert('Успішна реєстрація! Перенаправлення на головну сторінку...');
+        window.location.href = 'index.html'; // перенаправлення на головну сторінку
+    }
+
+    // Закоментований реальний запит на сервер
+    /*
+    const formData = new FormData(this);
+    fetch('/path/to/your/database/endpoint', {  // замініть `/register` на ваш серверний обробник
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            window.location.href = 'index.html';
+        } else {
+            alert('Помилка реєстрації: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Помилка:', error);
+        alert('Виникла помилка під час реєстрації.');
+    });
+    */
+});

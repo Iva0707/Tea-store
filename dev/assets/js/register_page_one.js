@@ -40,3 +40,12 @@ function validateFirstPage() {
 
     return isValid;
 }
+
+document.getElementById('firstRegistrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Зупиняє стандартну відправку форми
+
+    if (validateFirstPage()) {
+        // Імітація успішного переходу на другу сторінку без запиту на сервер
+        window.location.href = 'reg_page_two.html';
+    }
+});

@@ -1,0 +1,21 @@
+.repass{
+    max-width: 500px;
+    margin: 174px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    &__email{
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+    &__title{
+        font-size: 30px;
+        line-height: 36px;
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+.input-order--error {
+    border: 2px solid $color_error;
+}

@@ -1,4 +1,4 @@
-.register{
+.login{
     max-width: 500px;
     max-height: 682px;
     margin: 70px auto 82px auto;
@@ -10,6 +10,7 @@
     &__content{
         display: flex;
         flex-direction: column;
+        gap: 24px;
     }
     &__btn{
         min-width: 500px;
@@ -22,17 +23,39 @@
         flex-direction: column;
         gap: 32px;
     }
+    &__repass{
+        color: $color_green-additional;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 20px;
+        line-height: 25px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: $color_green-additional;
+            bottom: 3px;
+        }
+    }
 }
 
+
 .or{
-    margin-top: 24px;
-    margin-bottom: 24px;
     display: flex;
     justify-content: center;
     color: $color_green-additional;
     font-weight: 400;
     line-height: 25px;
     letter-spacing: 0.01em;
+    margin: 0;
 }
 
 .error-message {
@@ -43,5 +66,5 @@
 }
 
 .input-order--error {
-    border: 1px solid $color_error;
+    border: 2px solid $color_error;
 }
