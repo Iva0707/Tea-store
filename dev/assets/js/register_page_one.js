@@ -1,9 +1,16 @@
+document.getElementById("firstRegistrationForm").addEventListener("submit", (event) => { event.preventDefault() });
+
+
 function validateFirstPage() {
     let isValid = true;
-
-    // Перевірка телефону
     const phoneInput = document.getElementById("phone_input");
     const phoneError = document.getElementById("phone_error");
+    const passwordInput = document.getElementById("password_input");
+    const passwordError = document.getElementById("password_error");
+    const repeatPasswordInput = document.getElementById("repeat_password_input");
+    const repeatPasswordError = document.getElementById("repeat_password_error");
+    // Перевірка телефону
+
     const phoneRegex = /^380\d{9}$/;
     if (!phoneRegex.test(phoneInput.value)) {
         phoneError.style.display = "block";
@@ -15,8 +22,6 @@ function validateFirstPage() {
     }
 
     // Перевірка пароля
-    const passwordInput = document.getElementById("password_input");
-    const passwordError = document.getElementById("password_error");
     if (passwordInput.value.trim() === "") {
         passwordError.style.display = "block";
         passwordInput.classList.add("input-order--error");
@@ -27,8 +32,6 @@ function validateFirstPage() {
     }
 
     // Перевірка повторного введення пароля
-    const repeatPasswordInput = document.getElementById("repeat_password_input");
-    const repeatPasswordError = document.getElementById("repeat_password_error");
     if (passwordInput.value !== repeatPasswordInput.value) {
         repeatPasswordError.style.display = "block";
         repeatPasswordInput.classList.add("input-order--error");
@@ -39,13 +42,13 @@ function validateFirstPage() {
     }
 
     return isValid;
-}
+};
 
-document.getElementById('firstRegistrationForm').addEventListener('submit', function(event) {
+document.getElementById('firstRegistrationForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Зупиняє стандартну відправку форми
 
-    if (validateFirstPage()) {
         // Імітація успішного переходу на другу сторінку без запиту на сервер
+    if (validateFirstPage()) {
         window.location.href = 'reg_page_two.html';
     }
 });

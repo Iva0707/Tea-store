@@ -4,7 +4,7 @@ function validateLogin() {
     // Перевірка номера телефону
     const phoneInput = document.getElementById("phone_input");
     const phoneError = document.getElementById("phone_error");
-    const phoneRegex = /^\d{3}\s\d{2}\s\d{2}\s\d{2}\s\d{2}$/; // Регулярний вираз для формату телефону
+    const phoneRegex = /^380\d{9}$/; // Регулярний вираз для формату телефону
     if (!phoneRegex.test(phoneInput.value)) {
         phoneError.style.display = "block"; // Відображаємо повідомлення
         phoneInput.classList.add("input-order--error"); // Додаємо клас для червоного стилю
@@ -29,13 +29,55 @@ function validateLogin() {
     return isValid;
 }
 
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+const mockBackendData = {
+    phone: "380930082769",
+    password: "pasword123"
+};
+
+async function fakeLogin(userData) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (
+                userData.password === mockBackendData.password &&
+                userData.phone === mockBackendData.phone
+            ) {
+                resolve("Успішний вхід");
+                return true;
+            }
+            else {
+                reject("Помилка: дані не знайдено");
+            }
+        }, 1000);
+    });
+}
+
+document.getElementById('loginForm').addEventListener('submit', async function (event) {
     event.preventDefault(); // Зупиняє стандартну відправку форми
 
     if (validateLogin()) {
-        // Імітація успішного входу без запиту на сервер
-        alert('Успішний вхід! Перенаправлення...');
-        // Тут буде код для реального запиту на сервер, коли він буде доступний
-         window.location.href = 'index.html'; // перенаправлення на головну сторінку
+        const phone = document.getElementById("phone_input").value;
+        const password = document.getElementById("password_input").value;
+        const phoneInput = document.getElementById("phone_input");
+        const passwordInput = document.getElementById("password_input");
+        const userData = { phone, password };
+        const errorElements = document.getElementsByClassName("error-login");
+        try {
+            phoneInput.classList.remove("input-order--error");
+            passwordInput.classList.remove("input-order--error");
+            const result = await fakeLogin(userData);
+            Array.from(errorElements).forEach(el => el.style.display = "none");
+            console.log(result);
+            window.location.href = 'profile.html'; // перенаправлення на профіль
+
+        } catch (error) {
+            phoneInput.classList.add("input-order--error");
+            passwordInput.classList.add("input-order--error");
+            Array.from(errorElements).forEach(el => el.style.display = "block");
+        }
     }
 });
+
+
+function register(){
+    window.location.href = "reg_page_one.html";
+}

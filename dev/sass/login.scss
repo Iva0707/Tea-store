@@ -1,29 +1,35 @@
-.login{
+.login {
     max-width: 500px;
     max-height: 682px;
     margin: 70px auto 82px auto;
-    &__block{
+
+    &__block {
         display: flex;
         flex-direction: column;
         gap: 56px;
     }
-    &__content{
+
+    &__content {
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
-    &__btn{
+
+    &__btn {
         min-width: 500px;
     }
-    &__btnm{
+
+    &__btnm {
         margin-top: 12px;
     }
-    &__inputs{
+
+    &__inputs {
         display: flex;
         flex-direction: column;
         gap: 32px;
     }
-    &__repass{
+
+    &__repass {
         color: $color_green-additional;
         font-weight: 400;
         font-family: 'Montserrat', sans-serif;
@@ -33,7 +39,8 @@
         justify-content: center;
         position: relative;
         margin: 0 auto;
-        &::after{
+
+        &::after {
             content: "";
             display: block;
             position: absolute;
@@ -48,7 +55,7 @@
 }
 
 
-.or{
+.or {
     display: flex;
     justify-content: center;
     color: $color_green-additional;
@@ -67,4 +74,11 @@
 
 .input-order--error {
     border: 2px solid $color_error;
+}
+
+.error-login {
+    color: $color_error;
+    font-size: 14px;
+    display: none;
+    margin-top: 4px;
 }

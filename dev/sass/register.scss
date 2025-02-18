@@ -38,10 +38,11 @@
 .error-message {
     color: $color_error;
     font-size: 14px;
-    display: none;
+    display: block;
     margin-top: 4px;
 }
 
 .input-order--error {
     border: 1px solid $color_error;
+    display: block;
 }
