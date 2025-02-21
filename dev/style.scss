@@ -18,6 +18,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "sass/fonts";
 
 @import "sass/header";
+@import "sass/catalog";
 @import "sass/footer";
 
 @import "sass/main_hero";
@@ -35,6 +36,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "sass/payment";
 @import "sass/return";
 @import "sass/politics";
+
+
+@import "sass/make-hero";
+@import "sass/make-body";
 
 @import "sass/order.scss";
 // @import "sass/order.scss";

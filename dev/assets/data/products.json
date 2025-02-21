@@ -1,0 +1,857 @@
+[
+   {
+      "id": 1,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Зелений чай 'Sencha'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 45
+         },
+         {
+            "weight": 100,
+            "price": 80
+         },
+         {
+            "weight": 150,
+            "price": 115
+         }
+      ]
+   },
+   {
+      "id": 2,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Чорний чай 'Assam'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 90
+         },
+         {
+            "weight": 150,
+            "price": 130
+         }
+      ]
+   },
+   {
+      "id": 3,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Улун 'Tieguanyin'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 100
+         },
+         {
+            "weight": 150,
+            "price": 140
+         }
+      ]
+   },
+   {
+      "id": 4,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Трав'яний чай 'Chrysanthemum'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 30
+         },
+         {
+            "weight": 100,
+            "price": 55
+         },
+         {
+            "weight": 150,
+            "price": 80
+         }
+      ]
+   },
+   {
+      "id": 5,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Матча 'Premium'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 100
+         },
+         {
+            "weight": 100,
+            "price": 180
+         },
+         {
+            "weight": 150,
+            "price": 250
+         }
+      ]
+   },
+   {
+      "id": 6,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Білий чай 'Silver Needle'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 70
+         },
+         {
+            "weight": 100,
+            "price": 120
+         },
+         {
+            "weight": 150,
+            "price": 160
+         }
+      ]
+   },
+   {
+      "id": 7,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Червоний чай 'Rooibos'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 40
+         },
+         {
+            "weight": 100,
+            "price": 75
+         },
+         {
+            "weight": 150,
+            "price": 110
+         }
+      ]
+   },
+   {
+      "id": 8,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Чай 'Earl Grey'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 55
+         },
+         {
+            "weight": 100,
+            "price": 95
+         },
+         {
+            "weight": 150,
+            "price": 135
+         }
+      ]
+   },
+   {
+      "id": 9,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "М'ятний чай 'Peppermint'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 35
+         },
+         {
+            "weight": 100,
+            "price": 65
+         },
+         {
+            "weight": 150,
+            "price": 90
+         }
+      ]
+   },
+   {
+      "id": 10,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Лавандовий чай 'Lavender'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 80
+         },
+         {
+            "weight": 150,
+            "price": 110
+         }
+      ]
+   },
+   {
+      "id": 11,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Чай 'Lemon Verbena'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 45
+         },
+         {
+            "weight": 100,
+            "price": 75
+         },
+         {
+            "weight": 150,
+            "price": 100
+         }
+      ]
+   },
+   {
+      "id": 12,
+      "image": "assets/img/card_black-tea.jpg",
+      "name": "Індійський масала 'Chai'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 90
+         },
+         {
+            "weight": 150,
+            "price": 130
+         }
+      ]
+   },
+   {
+      "id": 13,
+      "image": "images/ginger-tea.jpg",
+      "name": "Імбирний чай 'Ginger'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 40
+         },
+         {
+            "weight": 100,
+            "price": 70
+         },
+         {
+            "weight": 150,
+            "price": 100
+         }
+      ]
+   },
+   {
+      "id": 14,
+      "image": "images/peach-tea.jpg",
+      "name": "Персиковий чай 'Peach'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 55
+         },
+         {
+            "weight": 100,
+            "price": 95
+         },
+         {
+            "weight": 150,
+            "price": 135
+         }
+      ]
+   },
+   {
+      "id": 15,
+      "image": "images/hibiscus-tea.jpg",
+      "name": "Гібіскус 'Hibiscus'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 45
+         },
+         {
+            "weight": 100,
+            "price": 75
+         },
+         {
+            "weight": 150,
+            "price": 100
+         }
+      ]
+   },
+   {
+      "id": 16,
+      "image": "images/fruit-tea.jpg",
+      "name": "Фруктовий чай 'Fruit Blend'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 40
+         },
+         {
+            "weight": 100,
+            "price": 70
+         },
+         {
+            "weight": 150,
+            "price": 100
+         }
+      ]
+   },
+   {
+      "id": 17,
+      "image": "images/vanilla-tea.jpg",
+      "name": "Ванільний чай 'Vanilla'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 90
+         },
+         {
+            "weight": 150,
+            "price": 120
+         }
+      ]
+   },
+   {
+      "id": 18,
+      "image": "images/rooibos-tea.jpg",
+      "name": "Червоний улун 'Rooibos'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 45
+         },
+         {
+            "weight": 100,
+            "price": 80
+         },
+         {
+            "weight": 150,
+            "price": 110
+         }
+      ]
+   },
+   {
+      "id": 19,
+      "image": "images/chamomile-tea.jpg",
+      "name": "Ромашковий чай 'Chamomile'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 30
+         },
+         {
+            "weight": 100,
+            "price": 50
+         },
+         {
+            "weight": 150,
+            "price": 70
+         }
+      ]
+   },
+   {
+      "id": 20,
+      "image": "images/rose-tea.jpg",
+      "name": "Чай з троянд 'Rose'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 90
+         },
+         {
+            "weight": 150,
+            "price": 120
+         }
+      ]
+   },
+   {
+      "id": 21,
+      "image": "images/barley-tea.jpg",
+      "name": "Ячмінний чай 'Barley'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 25
+         },
+         {
+            "weight": 100,
+            "price": 40
+         },
+         {
+            "weight": 150,
+            "price": 55
+         }
+      ]
+   },
+   {
+      "id": 22,
+      "image": "images/lemongrass-tea.jpg",
+      "name": "Чай з лемонграсу 'Lemongrass'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 35
+         },
+         {
+            "weight": 100,
+            "price": 65
+         },
+         {
+            "weight": 150,
+            "price": 90
+         }
+      ]
+   },
+   {
+      "id": 23,
+      "image": "images/peppermint-tea.jpg",
+      "name": "М'ятний чай 'Peppermint'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 40
+         },
+         {
+            "weight": 100,
+            "price": 70
+         },
+         {
+            "weight": 150,
+            "price": 100
+         }
+      ]
+   },
+   {
+      "id": 24,
+      "image": "images/lavender-tea.jpg",
+      "name": "Лавандовий чай 'Lavender'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 90
+         },
+         {
+            "weight": 150,
+            "price": 130
+         }
+      ]
+   },
+   {
+      "id": 25,
+      "image": "images/matcha-tea.jpg",
+      "name": "Матча 'Premium'",
+      "weights": [
+         {
+            "weight": 30,
+            "price": 120
+         },
+         {
+            "weight": 60,
+            "price": 230
+         },
+         {
+            "weight": 100,
+            "price": 370
+         }
+      ]
+   },
+   {
+      "id": 26,
+      "image": "images/oolong-tea.jpg",
+      "name": "Улун 'Tieguanyin'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 65
+         },
+         {
+            "weight": 100,
+            "price": 120
+         },
+         {
+            "weight": 150,
+            "price": 170
+         }
+      ]
+   },
+   {
+      "id": 27,
+      "image": "images/white-tea.jpg",
+      "name": "Білий чай 'Silver Needle'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 85
+         },
+         {
+            "weight": 100,
+            "price": 160
+         },
+         {
+            "weight": 150,
+            "price": 220
+         }
+      ]
+   },
+   {
+      "id": 28,
+      "image": "images/ginger-honey-tea.jpg",
+      "name": "Імбирно-медовий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 110
+         },
+         {
+            "weight": 150,
+            "price": 150
+         }
+      ]
+   },
+   {
+      "id": 29,
+      "image": "images/blackcurrant-tea.jpg",
+      "name": "Чорносмородиновий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 95
+         },
+         {
+            "weight": 150,
+            "price": 140
+         }
+      ]
+   },
+   {
+      "id": 30,
+      "image": "images/mango-tea.jpg",
+      "name": "Манговий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 55
+         },
+         {
+            "weight": 100,
+            "price": 100
+         },
+         {
+            "weight": 150,
+            "price": 145
+         }
+      ]
+   },
+   {
+      "id": 31,
+      "image": "images/jasmine-tea.jpg",
+      "name": "Жасминовий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 70
+         },
+         {
+            "weight": 100,
+            "price": 130
+         },
+         {
+            "weight": 150,
+            "price": 180
+         }
+      ]
+   },
+   {
+      "id": 32,
+      "image": "images/ginger-tea.jpg",
+      "name": "Імбирний чай з лимоном",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 65
+         },
+         {
+            "weight": 100,
+            "price": 120
+         },
+         {
+            "weight": 150,
+            "price": 170
+         }
+      ]
+   },
+   {
+      "id": 33,
+      "image": "images/milk-oolong.jpg",
+      "name": "Молочний Улун",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 90
+         },
+         {
+            "weight": 100,
+            "price": 170
+         },
+         {
+            "weight": 150,
+            "price": 240
+         }
+      ]
+   },
+   {
+      "id": 34,
+      "image": "images/pineapple-tea.jpg",
+      "name": "Ананасовий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 55
+         },
+         {
+            "weight": 100,
+            "price": 100
+         },
+         {
+            "weight": 150,
+            "price": 145
+         }
+      ]
+   },
+   {
+      "id": 35,
+      "image": "images/apple-cinnamon-tea.jpg",
+      "name": "Чай з яблуком і корицею",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 110
+         },
+         {
+            "weight": 150,
+            "price": 150
+         }
+      ]
+   },
+   {
+      "id": 36,
+      "image": "images/coconut-tea.jpg",
+      "name": "Кокосовий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 65
+         },
+         {
+            "weight": 100,
+            "price": 120
+         },
+         {
+            "weight": 150,
+            "price": 165
+         }
+      ]
+   },
+   {
+      "id": 37,
+      "image": "images/peach-mango-tea.jpg",
+      "name": "Персиково-манговий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 110
+         },
+         {
+            "weight": 150,
+            "price": 155
+         }
+      ]
+   },
+   {
+      "id": 38,
+      "image": "images/blueberry-tea.jpg",
+      "name": "Чай з чорницею",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 70
+         },
+         {
+            "weight": 100,
+            "price": 130
+         },
+         {
+            "weight": 150,
+            "price": 180
+         }
+      ]
+   },
+   {
+      "id": 39,
+      "image": "images/lychee-tea.jpg",
+      "name": "Чай з личі",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 75
+         },
+         {
+            "weight": 100,
+            "price": 140
+         },
+         {
+            "weight": 150,
+            "price": 200
+         }
+      ]
+   },
+   {
+      "id": 40,
+      "image": "images/chocolate-tea.jpg",
+      "name": "Шоколадний чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 65
+         },
+         {
+            "weight": 100,
+            "price": 120
+         },
+         {
+            "weight": 150,
+            "price": 170
+         }
+      ]
+   },
+   {
+      "id": 41,
+      "image": "images/caramel-tea.jpg",
+      "name": "Карамельний чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 55
+         },
+         {
+            "weight": 100,
+            "price": 100
+         },
+         {
+            "weight": 150,
+            "price": 145
+         }
+      ]
+   },
+   {
+      "id": 42,
+      "image": "images/vanilla-chai.jpg",
+      "name": "Ванільний чай 'Chai'",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 110
+         },
+         {
+            "weight": 150,
+            "price": 160
+         }
+      ]
+   },
+   {
+      "id": 43,
+      "image": "images/banana-tea.jpg",
+      "name": "Банановий чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 70
+         },
+         {
+            "weight": 100,
+            "price": 130
+         },
+         {
+            "weight": 150,
+            "price": 180
+         }
+      ]
+   },
+   {
+      "id": 44,
+      "image": "images/hibiscus-tea.jpg",
+      "name": "Чай каркаде",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 50
+         },
+         {
+            "weight": 100,
+            "price": 95
+         },
+         {
+            "weight": 150,
+            "price": 140
+         }
+      ]
+   },
+   {
+      "id": 45,
+      "image": "images/orange-cinnamon-tea.jpg",
+      "name": "Апельсиново-коричний чай",
+      "weights": [
+         {
+            "weight": 50,
+            "price": 60
+         },
+         {
+            "weight": 100,
+            "price": 115
+         },
+         {
+            "weight": 150,
+            "price": 165
+         }
+      ]
+   }
+]

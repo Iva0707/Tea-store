@@ -1,0 +1,38 @@
+.make-hero {
+	background: url("../assets/img/make-bg.jpg") 50% 50% / cover no-repeat;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+
+		padding: 137px 2.9% 119px;
+	}
+
+	&__content {
+		max-width: 525px;
+	}
+
+	&__title {
+		font-size: 96px;
+
+		background: $color_gradient-additional;
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__text {
+		text-align: justify;
+		line-height: 2.32rem;
+
+		p:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+}
