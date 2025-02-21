@@ -1,7 +1,7 @@
 
 import { orders } from './orders.js';
-import { generateOrderHTML } from './templateOrders.js';
-import { generateNoOrders } from './templateOrders.js';
+import { generateOrderHTML } from './templateProfileOrders.js';
+import { generateNoOrders } from './templateProfileOrders.js';
 
 
 
