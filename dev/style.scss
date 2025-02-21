@@ -38,10 +38,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "sass/politics";
 
 
+@import "sass/register.scss";
+@import "sass/repass.scss";
+@import "sass/delivery.scss";
+@import "sass/modal_Profile.scss";
+@import "sass/login.scss";
+
 @import "sass/make-hero";
 @import "sass/make-body";
 
 @import "sass/order.scss";
-// @import "sass/order.scss";
 
 @import "sass/media/media";
