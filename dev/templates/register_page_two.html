@@ -1,0 +1,30 @@
+<section class="register">
+    <div class="register__block">
+        <h1 class="title">Реєстрація</h1>
+        <div class="register__content">
+            <form action="javascript:void(0);" class="register__inputs" id="secondRegistrationForm" onsubmit="return validateSecondPage()" novalidate>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="email_input">Електронна пошта</label>
+                    <input type="text" name="email" class="input-order" id="email_input" placeholder="tea_store@gmail.com" required>
+                    <span class="error-message" id="email_error">Введено некоректний формат електронної пошти</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="name_input">Ім'я</label>
+                    <input type="text" name="first_name" class="input-order" id="name_input" placeholder="Ірина" required>
+                    <span class="error-message" id="name_error">Будь ласка, введіть своє ім'я</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="surname_input">Прізвище</label>
+                    <input type="text" name="last_name" class="input-order" id="surname_input" placeholder="Філіменко" required>
+                    <span class="error-message" id="surname_error">Будь ласка, введіть своє прізвище</span>
+                </div>
+                <div class="input-order__box">
+                    <label class="input-order__title" for="age_input">Вік</label>
+                    <input type="text" name="age" class="input-order" id="age_input" placeholder="34" required>
+                    <span class="error-message" id="age_error">Будь ласка, введіть свій вік</span>
+                </div>
+                <button type="submit" class="btn register__btn register__btnm">Зареєструватися</button>
+            </form>
+        </div>
+    </div>
+</section>

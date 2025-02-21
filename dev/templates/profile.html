@@ -1,0 +1,79 @@
+<section class="profile__container">
+    <aside class="sidebar">
+        <ul>
+            <li class="sidebar__active sidebar__item" data-section="personal-info">
+                <div class="sidebar__text">Персональна інформація</div>
+            </li>
+            <li class="sidebar__item" data-section="order-history">
+                <div class="sidebar__text">Історія <br> замовлень</div>
+            </li>
+            <li class="sidebar__item" data-section="saved-products">
+                <div class="sidebar__text">Збережені <br> товари</div>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Основний контент -->
+    <!-- Персональна інформація -->
+    <div id="personal-info" class="content__section">
+        <div class="profile">
+            <!-- Аватар з іконкою для редагування -->
+            <div class="profile__avatar">
+                <div class="profile__avatar-wrap">
+                    <img id="avatar" class="profile__avatar-img" src="../assets/img/demo_avatar.png" alt="Avatar">
+                    <button class="profile__change-avatar-btn" id="change-avatar"><img src="../assets/img/edit-2.png" alt="edit"></button>
+                </div>
+                <div class="profile__age">
+                    <lable class="input-profile__title" for="input-profile">Вік</lable>
+                    <div class="profile__age-box">
+                        <input type="text" class="input-profile profile__age-input" id="profile-age" value="" readonly>
+                        <button type="reset" class="input-profile__btn edit-btn" data-input="profile-age" data-modal="modal-age">Змінити</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Форма даних -->
+            <div id="personal-form" class="profile__form">
+                <div class="input-profile__item">
+                    <lable class="input-profile__title" for="input-profile">Ім'я та прізвище</lable>
+                    <div class="input-profile__box">
+                        <input type="text" class="input-profile" id="profile-name" value="" readonly>
+                        <button type="reset" class="input-profile__btn edit-btn" data-input="profile-name" data-modal="modal-name">Змінити</button>
+                    </div>
+                </div>
+                <div class="input-profile__item">
+                    <lable class="input-profile__title" for="input-profile">Номер телефону</lable>
+                    <div class="input-profile__box">
+                        <input type="text" class="input-profile" id="profile-number" value="" readonly>
+                        <button type="reset" class="input-profile__btn edit-btn" data-input="profile-number" data-modal="modal-number">Змінити</button>
+                    </div>
+                </div>
+                <div class="input-profile__item">
+                    <lable class="input-profile__title" for="input-profile">Електронна адреса</lable>
+                    <div class="input-profile__box">
+                        <input type="text" class="input-profile" id="profile-email" value="" readonly>
+                        <button type="reset" class="input-profile__btn edit-btn" data-input="profile-email" data-modal="modal-email">Змінити</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Кнопка виходу -->
+             <div class="wrap-logout">
+                <button class="logout-btn big-btn btn" onclick="logout()">Вийти з профілю</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="order-history" class="content__section">
+
+    </div>
+
+
+    <div id="saved-products" class="content__section">
+        <div class="saved__miss">
+            <div class="wrapper_top">
+                <div class="saved__text">Збережи свої улюблені товари, щоб швидко повернутися до них пізніше!</div>
+                <img src="../assets/img/favoritesMiss.png" alt="no favorites" class="saved__img">
+            </div>
+            <a href="#" class="btn favorites-miss__btn">Перейти в каталог</a>
+        </div>
+    </div>
+</section>
