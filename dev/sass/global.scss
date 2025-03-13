@@ -740,7 +740,6 @@ input[type="search"] {
 		grid-template-rows: repeat(2, auto);
 		row-gap: 16px;
 	}
-
 	// .card-goods__img
 
 	&__img {
@@ -800,5 +799,6 @@ input[type="search"] {
 	&__icon-cart {
 		width: 24px;
 		height: 24px;
+		border: none;
 	}
 }

@@ -1,21 +1,45 @@
-<section id="basket__section">
+<section class="basket__section">
     <div class="basket__header">
         <h2 class="basket__text">Кошик</h2>
     </div>
     <div class="basket__data">
         <div class="basket__products">
-            
-        </div>
-        <div class="basket__order">
 
-            <button type="button" class="">Оформити замовлення</button>
-            <button type="button" class="">Продовжити покупки</button>
+        </div>
+        <div class="basket">
+            <div class="basket__order-details">
+                <div class="basket__summ">
+                    <div class="basket__text-order">Сума замовлення</div>
+                    <div class="basket__text-order basket__price" id="basket__products-summ">365 грн</div>
+                </div>
+                <div class="basket__summ">
+                    <div class="basket__text-order basket__result">Загальна сума</div>
+                    <div class="basket__text-order basket__price basket__result" id="basket__summ">365 грн</div>
+                </div>
+            </div>
+            <div class="basket__order-details-btns">
+                <div class="buttons__item basket__order-btn">
+                    <a href="order.html" class="btn">Оформити замовлення</a>
+                </div>
+                <div class="buttons__item basket__order-btn">
+                    <a href="index.html" class="btn btn-outline">Продовжити покупки</a>
+                </div>
+            </div>
         </div>
     </div>
+
     <div class="basket__footer">
         <h2 class="basket__text">Схожі товари</h2>
-        <div class="basket__same-products">
+        <div class="same-products">
+            <button type="button" class="same-products__btn-scroll btn-prev"><img src="../assets/img/left.png"
+                    alt="left"></button>
+            <div class="product__slider-container">
+                <div class="product__slider-bar">
 
+                </div>
+            </div>
+            <button type="button" class="same-products__btn-scroll btn-next"><img src="../assets/img/right.png"
+                    alt="right"></button>
         </div>
     </div>
 </section>
